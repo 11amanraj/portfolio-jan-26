@@ -26,13 +26,9 @@ const page = () => {
                 </EachSection>
 
                 <SectionDivider />
+                <h2 className='text-5xl'><Link href="/">Back</Link></h2>
             </div>
         </div>
-        // <div>
-        //     <h1>Case Study 2</h1>
-
-        //     <Link href="/">Home Page</Link>
-        // </div>
     )
 }
 
