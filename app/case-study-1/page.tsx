@@ -20,7 +20,7 @@ const page = () => {
                     left: 0
                 }}
                 transition={{ duration: 5 }}
-                className='bg-red-500 h-50 w-100 cursor-pointer absolute top-120 left-60'
+                className='bg-red-500 h-50 w-100 cursor-pointer fixed top-120 left-60'
             >
             </motion.div>
             <h1>
