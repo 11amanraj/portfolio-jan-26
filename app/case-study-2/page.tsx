@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import TitleSection from '../Components/CaseStudy/TitleSection'
 import SectionDivider from '../Components/CaseStudy/SectionDivider'
 import EachSection from '../Components/CaseStudy/EachSection'
@@ -8,7 +7,7 @@ const page = () => {
     return (
         <div className='flex flex-col'>
             <div className='bg-red-500 w-screen h-[67vh]'></div>
-            <div className='w-7xl self-center'>
+            <div className='mx-6 sm:mx-8 md:mx-16 2xl:mx-80 self-center'>
                 <TitleSection />
 
                 <EachSection title="Problem">
