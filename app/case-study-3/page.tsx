@@ -13,11 +13,17 @@ const page = () => {
             <motion.div
                 layoutId='Third'
                 transition={{
-                    duration: 5
+                    duration: 0.5
                 }}
                 className='relative top-0 left-0 w-screen h-[50vh] bg-indigo-500'
             />
-            <p>Is this working?</p>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+            >
+                <p>Is this working?</p>
+            </motion.div>
         </div>
     )
 }
