@@ -6,7 +6,6 @@ import { motion } from 'motion/react'
 import TitleSection from '../Components/CaseStudy/TitleSection'
 import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
-import SectionWrapper from '../Components/CaseStudy/SectionWrapper'
 
 function CollapsedCard() {
     return (

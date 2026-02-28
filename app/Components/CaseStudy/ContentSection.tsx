@@ -1,4 +1,3 @@
-import SectionDivider from './SectionDivider'
 import SectionWrapper from './SectionWrapper'
 
 const ContentSection = ({ title, children }: { title: string, children: React.ReactNode }) => {

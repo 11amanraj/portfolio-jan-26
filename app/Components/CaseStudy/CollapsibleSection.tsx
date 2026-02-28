@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import SectionDivider from './SectionDivider'
 import SectionWrapper from './SectionWrapper'
 
 const CollapsibleSection = ({ title, collapsed, expanded }: { title: string, collapsed: React.ReactNode, expanded: React.ReactNode }) => {
