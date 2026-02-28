@@ -53,7 +53,15 @@ export default function Home() {
             className="w-50 h-40 cursor-pointer rounded-2xl bg-indigo-500"
           ></motion.div>
         </Link>
-        <div className="w-50 h-40 cursor-pointer rounded-2xl bg-blue-400"></div>
+
+        <Link href="case-study-2">
+          <motion.div
+            layoutId="Second"
+            className="w-50 h-40 cursor-pointer rounded-2xl bg-red-500"
+          ></motion.div>
+        </Link>
+
+        {/* <div className="w-50 h-40 cursor-pointer rounded-2xl bg-red-500"></div> */}
         <div className="w-50 h-40 cursor-pointer rounded-2xl bg-green-400"></div>
       </div>
 

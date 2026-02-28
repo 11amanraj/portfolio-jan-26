@@ -1,4 +1,8 @@
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'motion/react'
+
 import TitleSection from '../Components/CaseStudy/TitleSection'
 import SectionDivider from '../Components/CaseStudy/SectionDivider'
 import EachSection from '../Components/CaseStudy/EachSection'
@@ -19,8 +23,20 @@ function ExpandedCard() {
 const page = () => {
     return (
         <div className='flex flex-col'>
-            <div className='bg-red-500 w-screen aspect-[2.65]'></div>
-            <div className='mx-6 sm:mx-8 md:mx-16 2xl:mx-80 self-center'>
+            <motion.div
+                layoutId='Second'
+                transition={{
+                    duration: 0.5
+                }}
+                className='relative bg-red-500 w-screen aspect-[2.65]'
+            ></motion.div>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className='mx-6 sm:mx-8 md:mx-16 2xl:mx-80 self-center'
+            >
                 <TitleSection />
 
                 <EachSection title="Problem">
@@ -41,7 +57,7 @@ const page = () => {
 
                 <SectionDivider />
                 <h2 className='text-5xl'><Link href="/">Back</Link></h2>
-            </div>
+            </motion.div>
         </div>
     )
 }
