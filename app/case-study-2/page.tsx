@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { motion } from 'motion/react'
 
 import TitleSection from '../Components/CaseStudy/TitleSection'
-import SectionDivider from '../Components/CaseStudy/SectionDivider'
-import EachSection from '../Components/CaseStudy/EachSection'
+import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
+import SectionWrapper from '../Components/CaseStudy/SectionWrapper'
 
 function CollapsedCard() {
     return (
@@ -31,33 +31,28 @@ const page = () => {
                 className='relative bg-red-500 w-screen aspect-[2.65]'
             ></motion.div>
 
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className='mx-6 sm:mx-8 md:mx-16 2xl:mx-80 self-center'
-            >
+            <div className='mx-6 sm:mx-8 md:mx-16 2xl:mx-80 self-center'>
                 <TitleSection />
 
-                <EachSection title="Problem">
+                <ContentSection title="Problem">
                     <p className='font-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                </EachSection>
+                </ContentSection>
 
                 <CollapsibleSection collapsed={<CollapsedCard />} expanded={<ExpandedCard />} title='Research' />
 
-                <EachSection title="Definition">
+                <ContentSection title="Definition">
                     <p className='font-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                </EachSection>
+                </ContentSection>
 
-                <EachSection title="Solution">
+                <ContentSection title="Solution">
                     <div className='bg-white w-full h-244'></div>
-                </EachSection>
+                </ContentSection>
 
-                <SectionDivider />
+                <div className='my-8 h-px w-full bg-[#414651]'></div>
                 <h2 className='text-5xl'><Link href="/">Back</Link></h2>
-            </motion.div>
+            </div>
         </div>
     )
 }
