@@ -5,7 +5,7 @@ const EachSection = ({ title, children }: { title: string, children: React.React
         <>
             <SectionDivider />
             <section className='flex flex-col gap-4'>
-                <h3 className='text-2xl'>{title.toUpperCase()}</h3>
+                <h3 className='text-2xl text-[#6E737D]'>{title.toUpperCase()}</h3>
                 <>
                     {children}
                 </>
