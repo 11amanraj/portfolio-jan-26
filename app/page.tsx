@@ -46,7 +46,12 @@ export default function Home() {
       </div> */}
 
       <div className="flex gap-8 m-8">
-        <div className="relative -top-1 w-50 h-40 cursor-pointer rounded-2xl bg-red-400"></div>
+        <Link href="case-study-3">
+          <motion.div
+            layoutId="Third"
+            className="w-50 h-40 cursor-pointer rounded-2xl bg-indigo-500"
+          ></motion.div>
+        </Link>
         <div className="w-50 h-40 cursor-pointer rounded-2xl bg-blue-400"></div>
         <div className="w-50 h-40 cursor-pointer rounded-2xl bg-green-400"></div>
       </div>
