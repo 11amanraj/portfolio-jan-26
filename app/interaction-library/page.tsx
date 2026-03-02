@@ -1,8 +1,9 @@
 import React from 'react'
+import RadialRevealCard from '../Components/Interactions/RadialRevealCard'
 
 const page = () => {
     return (
-        <div>page</div>
+        <RadialRevealCard />
     )
 }
 
