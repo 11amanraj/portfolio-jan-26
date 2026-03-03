@@ -1,10 +1,11 @@
 'use client'
 
-import { motion } from "framer-motion"
+import { useRef } from "react"
+import { motion, animate } from "framer-motion"
 
-const EachCard = ({ title }: { title: string }) => {
+const EachCard = ({ title, onClick }: { title: string, onClick: (el: HTMLDivElement) => void }) => {
     return (
-        <div className='bg-black text-white min-w-[200px] p-4 rounded-md h-40 cursor-pointer'>{title}</div>
+        <div onClick={(e) => onClick(e.currentTarget)} className='bg-black text-white min-w-50 p-4 rounded-md h-40 cursor-pointer'>{title}</div>
     )
 }
 
@@ -16,25 +17,42 @@ const ExpandingCarousel = () => {
         { title: "Card #4" },
     ]
 
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const selectHandler = (el: HTMLDivElement) => {
+        if (!containerRef.current) return
+
+        const container = containerRef.current
+
+        const cardOffsetLeft = el.offsetLeft
+        const currentScroll = container.scrollLeft
+
+        // Get computed padding-left of container
+        const styles = window.getComputedStyle(container)
+        const paddingLeft = parseFloat(styles.paddingLeft)
+
+        const targetScroll = cardOffsetLeft - paddingLeft
+
+        animate(currentScroll, targetScroll, {
+            duration: 0.6,
+            ease: "easeInOut",
+            onUpdate: (latest) => {
+                container.scrollLeft = latest
+            },
+        })
+    }
+
     return (
         <div className="bg-blue-200 w-screen h-screen text-black p-4 flex items-center">
-            <div className="bg-white w-full overflow-hidden rounded-md p-4">
-                <motion.div
-                    className="flex gap-2 w-max"
-                    animate={{ x: ["0%", "-50%"] }}
-                    transition={{
-                        ease: "linear",
-                        duration: 12,
-                        repeat: Infinity,
-                    }}
-                >
+            <div ref={containerRef} className="bg-white w-full overflow-x-auto rounded-md p-4">
+                <div className="flex gap-2 w-max">
                     {cards.map((card, i) => (
-                        <EachCard key={i} title={card.title} />
+                        <EachCard onClick={selectHandler} key={i} title={card.title} />
                     ))}
                     {cards.map((card, i) => (
-                        <EachCard key={`duplicate-${i}`} title={card.title} />
+                        <EachCard onClick={selectHandler} key={`duplicate-${i}`} title={card.title} />
                     ))}
-                </motion.div>
+                </div>
             </div>
         </div>
     )
