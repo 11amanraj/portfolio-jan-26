@@ -8,17 +8,37 @@ import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
 
 function CollapsedCard() {
+    const container = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.4,
+                delayChildren: 1.5
+            }
+        }
+    }
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4 } }
+    }
+
     return (
-        <div className='h-182 w-full flex gap-4'>
+        <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className='h-182 w-full flex gap-4'
+        >
             <div className='flex-1 flex flex-col gap-4'>
-                <div className='bg-red-200 rounded-lg px-4 py-12 text-4xl text-black'>Lorem Ipsum</div>
-                <div className='bg-blue-200 rounded-lg flex-1'></div>
+                <motion.div variants={item} className='bg-red-200 rounded-lg px-4 py-12 text-4xl text-black'>Lorem Ipsum</motion.div>
+                <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
             </div>
             <div className='flex-1 flex flex-col gap-4'>
-                <div className='bg-blue-200 rounded-lg flex-1'></div>
-                <div className='bg-blue-200 rounded-lg flex-1'></div>
+                <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
+                <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
