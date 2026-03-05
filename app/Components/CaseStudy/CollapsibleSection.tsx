@@ -8,15 +8,16 @@ const CollapsibleSection = ({ title, collapsed, expanded }: { title: string, col
 
     return (
         <SectionWrapper>
-            <div className='flex justify-between'>
-                <h3 className='text-2xl text-[#6E737D]'>{isExpanded ? `${title.toUpperCase()}` : `${title.toUpperCase()} - SUMMARY`}</h3>
-                <button onClick={() => setIsExpanded(prev => !prev)} className='flex gap-2 text-2xl cursor-pointer'>
-                    <p>{isExpanded ? "Collapse" : "Expand"}</p>
-                    <p>{isExpanded ? "-" : "+"}</p>
-                </button>
-            </div>
+            <h3 className='text-2xl text-[#6E737D]'>{`${title.toUpperCase()}`}</h3>
             <>
                 {collapsed}
+                <div className='flex justify-between mt-4'>
+                    <p className='text-2xl'>DIVE DEEPER INTO THE RESEARCH PROCESS</p>
+                    <button onClick={() => setIsExpanded(prev => !prev)} className='flex gap-2 text-2xl cursor-pointer'>
+                        <p>{isExpanded ? "Collapse" : "Expand"}</p>
+                        <p>{isExpanded ? "-" : "+"}</p>
+                    </button>
+                </div>
                 {isExpanded && expanded}
             </>
         </SectionWrapper>
