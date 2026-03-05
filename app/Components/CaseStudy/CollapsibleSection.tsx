@@ -16,7 +16,8 @@ const CollapsibleSection = ({ title, collapsed, expanded }: { title: string, col
                 </button>
             </div>
             <>
-                {isExpanded ? expanded : collapsed}
+                {collapsed}
+                {isExpanded && expanded}
             </>
         </SectionWrapper>
     )
