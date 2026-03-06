@@ -24,7 +24,7 @@ const CardSwitcher = ({ card_details, title }: { card_details: CardDetail[], tit
 
     return (
         <div className='w-full h-full p-8 relative overflow-hidden flex flex-col gap-4'>
-            <h3 className="text-[32px] font-bold text-black">{title.toUpperCase()}</h3>
+            <h3 className="text-[32px] font-heading font-bold text-black">{title.toUpperCase()}</h3>
             <AnimatePresence mode="wait">
                 <motion.img
                     key={`number-${activeCard}`}
