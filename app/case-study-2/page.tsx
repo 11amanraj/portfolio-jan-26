@@ -126,7 +126,24 @@ function CollapsedCard() {
                 <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
             </div>
             <div className='flex-1 flex flex-col gap-4'>
-                <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'>
+                <motion.div variants={item} className='bg-blue-200 rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
+                    <h3 className="text-[32px] font-heading font-bold">DESIGN OPPORTUNITIES</h3>
+                    <div className='flex flex-col gap-6'>
+                        <div className='flex flex-col'>
+                            <h4 className='font-semibold'>Unified Financial Overview</h4>
+                            <p>Give users a single place to understand their financial activity. Payments, expenses, and pending obligations should appear together.</p>
+                        </div>
+
+                        <div className='flex flex-col'>
+                            <h4 className='font-semibold'>Passive Expense Tracking</h4>
+                            <p>Reduce the effort required to monitor spending. Expenses should be automatically organized and summarized.</p>
+                        </div>
+
+                        <div className='flex flex-col'>
+                            <h4 className='font-semibold'>Integrated Social Payments</h4>
+                            <p>Make shared expenses easier to manage within everyday transactions. Pending balances and repayments should remain visible.</p>
+                        </div>
+                    </div>
                 </motion.div>
                 <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg flex-1'>
                     <CardSwitcher title="User Responses (highlights)" card_details={card_details} />
