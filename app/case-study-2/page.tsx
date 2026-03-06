@@ -123,10 +123,29 @@ function CollapsedCard() {
         >
             <div className='flex-1 flex flex-col gap-4'>
                 <motion.div variants={item} className='bg-red-200 rounded-lg px-4 py-12 text-4xl text-black'>Lorem Ipsum</motion.div>
-                <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
+                {/* <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div> */}
+                <motion.div variants={item} className='bg-[#E1F0F2] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
+                    <h3 className="text-[32px] font-heading font-bold">INSIGHTS SUMMARY</h3>
+                    <div className='flex flex-col gap-6'>
+                        <div className='flex flex-col'>
+                            <h4 className='font-semibold'>Transaction Overload</h4>
+                            <p>Frequent micro-payments make it difficult for users to track spending. Small daily expenses accumulate unnoticed, and many rely on bank balance.</p>
+                        </div>
+
+                        <div className='flex flex-col'>
+                            <h4 className='font-semibold'>Fragmented Expense Visibility</h4>
+                            <p>Transaction histories lack clarity and consistency. Merchant names vary across POS systems, making it harder for users to recognize spending.</p>
+                        </div>
+
+                        <div className='flex flex-col'>
+                            <h4 className='font-semibold'>Friction in Shared Expenses</h4>
+                            <p>Splitting bills introduces extra steps and limited visibility. Users struggle to track who has paid, while pending obligations often disappear.</p>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
             <div className='flex-1 flex flex-col gap-4'>
-                <motion.div variants={item} className='bg-blue-200 rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
+                <motion.div variants={item} className='bg-[#E1F0F2] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
                     <h3 className="text-[32px] font-heading font-bold">DESIGN OPPORTUNITIES</h3>
                     <div className='flex flex-col gap-6'>
                         <div className='flex flex-col'>
