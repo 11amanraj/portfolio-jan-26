@@ -2,15 +2,9 @@
 
 import { AnimatePresence, motion } from "motion/react"
 import { useState, useEffect } from "react"
+import { CardDetail } from "@/app/types/casestudy"
 
-const CardSwitcher = () => {
-    const card_details = [
-        { id: 0, description: "Description for Case Study 1" },
-        { id: 1, description: "Description for Case Study 2" },
-        { id: 2, description: "Description for Case Study 3" },
-        { id: 3, description: "Description for Case Study 4" }
-    ]
-
+const CardSwitcher = ({ card_details, title }: { card_details: CardDetail[], title: string }) => {
     const [activeCard, setActiveCard] = useState(0)
 
     useEffect(() => {
@@ -29,15 +23,15 @@ const CardSwitcher = () => {
     }
 
     return (
-        <div className='w-158 h-73 bg-[#EDE4F3] p-8 relative'>
+        <div className='w-158 h-73 bg-[#EDE4F3] p-8 relative overflow-hidden flex flex-col gap-4'>
+            <h3 className="text-[32px] font-bold text-black">{title.toUpperCase()}</h3>
             <AnimatePresence mode="wait">
-                <motion.h2
+                <motion.img
                     key={`number-${activeCard}`}
                     {...animationValues}
-                    className="absolute right-8 bottom-6 text-black text-8xl"
-                >
-                    {activeCard + 1}
-                </motion.h2>
+                    className="absolute w-50 h-50 right-4 bottom-2" src={card_details[activeCard].img}
+                    alt={`Case Study ${activeCard + 1}`}
+                />
                 <motion.p
                     key={`text-${activeCard}`}
                     className="text-black text-2xl italic font-extralight"
@@ -46,7 +40,7 @@ const CardSwitcher = () => {
                     {card_details[activeCard].description}
                 </motion.p>
             </AnimatePresence>
-            <div className="flex gap-3 mt-4">
+            <div className="flex gap-3">
                 {card_details.map((card) => (
                     <div
                         key={card.id}
