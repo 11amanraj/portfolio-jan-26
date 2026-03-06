@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react"
+import CardSwitcher from "./Components/CaseStudy/CardSwitcher";
 
 export default function Home() {
   return (
@@ -34,6 +35,8 @@ export default function Home() {
           <div className="w-50 h-40 cursor-pointer rounded-2xl bg-green-400"></div>
         </Link>
       </div>
+
+      <CardSwitcher />
     </div>
   );
 }
