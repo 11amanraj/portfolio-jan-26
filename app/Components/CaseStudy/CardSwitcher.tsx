@@ -34,7 +34,7 @@ const CardSwitcher = ({ card_details, title }: { card_details: CardDetail[], tit
                 />
                 <motion.p
                     key={`text-${activeCard}`}
-                    className="text-black text-2xl italic font-extralight"
+                    className="text-black text-2xl w-104 italic font-extralight"
                     {...animationValues}
                 >
                     {card_details[activeCard].description}

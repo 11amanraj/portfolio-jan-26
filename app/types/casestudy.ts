@@ -1,5 +1,5 @@
 export interface CardDetail {
     id: number
-    description: string
+    description: React.ReactNode
     img: string
 }

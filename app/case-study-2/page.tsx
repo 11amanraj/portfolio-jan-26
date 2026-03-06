@@ -11,10 +11,92 @@ import { CardDetail } from '../types/casestudy'
 
 function CollapsedCard() {
     const card_details: CardDetail[] = [
-        { id: 0, description: "Description for Case Study 1", img: "/case-study-1/images/research-summary-1.png" },
-        { id: 1, description: "Description for Case Study 2", img: "/case-study-1/images/research-summary-1.png" },
-        { id: 2, description: "Description for Case Study 3", img: "/case-study-1/images/research-summary-1.png" },
-        { id: 3, description: "Description for Case Study 4", img: "/case-study-1/images/research-summary-1.png" }
+        {
+            id: 0,
+            description: (
+                <>
+                    <span className="font-bold">80%</span> said friends often forget to repay split expenses;{" "}
+                    <span className="font-bold">55%</span> struggle to track who has paid.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 1,
+            description: (
+                <>
+                    <span className="font-bold">75%</span> avoid expense tracking because it feels tedious;{" "}
+                    <span className="font-bold">40%</span> stopped using tracking apps.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 2,
+            description: (
+                <>
+                    <span className="font-bold">72%</span> lose track of small UPI payments;{" "}
+                    <span className="font-bold">47%</span> said these expenses accumulate unnoticed.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 3,
+            description: (
+                <>
+                    <span className="font-bold">68%</span> rely on bank balance alone instead of actively tracking their spending habits.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 4,
+            description: (
+                <>
+                    <span className="font-bold">65%</span> struggle to recall what a transaction was for;{" "}
+                    <span className="font-bold">45%</span> forget whom they paid.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 5,
+            description: (
+                <>
+                    <span className="font-bold">63%</span> struggle to recognize merchants due to inconsistent names;{" "}
+                    <span className="font-bold">49%</span> see the same shop listed differently.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 6,
+            description: (
+                <>
+                    <span className="font-bold">60%</span> realize overspending only after their balance drops significantly much later.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 7,
+            description: (
+                <>
+                    <span className="font-bold">58%</span> said creating groups for one-time bill splits feels unnecessary and tedious.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        },
+        {
+            id: 8,
+            description: (
+                <>
+                    <span className="font-bold">52%</span> said transaction histories often don’t clearly explain where money went.
+                </>
+            ),
+            img: "/case-study-1/images/research-summary-1.png"
+        }
     ]
 
     const container = {
