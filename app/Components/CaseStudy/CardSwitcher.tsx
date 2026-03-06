@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from "motion/react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const CardSwitcher = () => {
     const card_details = [
@@ -12,6 +12,14 @@ const CardSwitcher = () => {
     ]
 
     const [activeCard, setActiveCard] = useState(0)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setActiveCard((prev) => (prev + 1) % card_details.length)
+        }, 3000)
+
+        return () => clearTimeout(timer)
+    }, [activeCard])
 
     const animationValues = {
         initial: { opacity: 0, x: 700 },
