@@ -3,6 +3,12 @@
 import Link from 'next/link'
 import { motion } from 'motion/react'
 
+import ShuffleIcon from "@mui/icons-material/Shuffle"
+import AssignmentIcon from "@mui/icons-material/Assignment"
+import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver"
+import GroupIcon from "@mui/icons-material/Group"
+import TrackChangesIcon from "@mui/icons-material/TrackChanges"
+
 import TitleSection from '../Components/CaseStudy/TitleSection'
 import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
@@ -124,8 +130,32 @@ function CollapsedCard() {
             <div className='flex-1 flex flex-col gap-4'>
                 <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
                     <h3 className="text-[32px] font-heading font-bold">RESEARCH APPROACH</h3>
-                    <div>
-                        <div></div>
+
+                    <div className='flex justify-between'>
+                        <div className='flex gap-4 items-center'>
+                            <ShuffleIcon sx={{ fontSize: 44 }} className='bg-black text-white rounded-sm' />
+                            <p className='font-medium max-w-30 leading-5'>Mixed Method Approach</p>
+                        </div>
+
+                        <div className='flex gap-4 items-center'>
+                            <AssignmentIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+                            <p className='font-medium max-w-30 leading-5'>54 Survey Respondents</p>
+                        </div>
+
+                        <div className='flex gap-4 items-center'>
+                            <RecordVoiceOverIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+                            <p className='font-medium max-w-30 leading-5'>18 Interviews</p>
+                        </div>
+                    </div>
+
+                    <div className='flex gap-4 items-center'>
+                        <GroupIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+                        <p><span className='text-black font-semibold'>Participants : </span><span className='font-light'>Frequent UPI users</span></p>
+                    </div>
+
+                    <div className='flex gap-4 items-center'>
+                        <TrackChangesIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+                        <p><span className='text-black font-semibold'>Focus : </span><span className='font-light'>Payment behaviour and expense awareness</span></p>
                     </div>
                 </motion.div>
                 <motion.div variants={item} className='bg-[#E1F0F2] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
