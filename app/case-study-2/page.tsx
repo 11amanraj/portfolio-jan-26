@@ -122,8 +122,12 @@ function CollapsedCard() {
             className='h-182 w-full flex gap-4'
         >
             <div className='flex-1 flex flex-col gap-4'>
-                <motion.div variants={item} className='bg-red-200 rounded-lg px-4 py-12 text-4xl text-black'>Lorem Ipsum</motion.div>
-                {/* <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div> */}
+                <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
+                    <h3 className="text-[32px] font-heading font-bold">RESEARCH APPROACH</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </motion.div>
                 <motion.div variants={item} className='bg-[#E1F0F2] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
                     <h3 className="text-[32px] font-heading font-bold">INSIGHTS SUMMARY</h3>
                     <div className='flex flex-col gap-6'>
