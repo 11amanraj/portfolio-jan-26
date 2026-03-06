@@ -2,16 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "motion/react"
-import CardSwitcher from "./Components/CaseStudy/CardSwitcher";
-import { CardDetail } from "./types/casestudy";
 
 export default function Home() {
-  const card_details: CardDetail[] = [
-    { id: 0, description: "Description for Case Study 1", img: "/case-study-1/images/research-summary-1.png" },
-    { id: 1, description: "Description for Case Study 2", img: "/case-study-1/images/research-summary-1.png" },
-    { id: 2, description: "Description for Case Study 3", img: "/case-study-1/images/research-summary-1.png" },
-    { id: 3, description: "Description for Case Study 4", img: "/case-study-1/images/research-summary-1.png" }
-  ]
 
   return (
     <div>
@@ -43,8 +35,6 @@ export default function Home() {
           <div className="w-50 h-40 cursor-pointer rounded-2xl bg-green-400"></div>
         </Link>
       </div>
-
-      <CardSwitcher title="User Responses (highlights)" card_details={card_details} />
     </div>
   );
 }

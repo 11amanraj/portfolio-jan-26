@@ -6,8 +6,17 @@ import { motion } from 'motion/react'
 import TitleSection from '../Components/CaseStudy/TitleSection'
 import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
+import CardSwitcher from '../Components/CaseStudy/CardSwitcher'
+import { CardDetail } from '../types/casestudy'
 
 function CollapsedCard() {
+    const card_details: CardDetail[] = [
+        { id: 0, description: "Description for Case Study 1", img: "/case-study-1/images/research-summary-1.png" },
+        { id: 1, description: "Description for Case Study 2", img: "/case-study-1/images/research-summary-1.png" },
+        { id: 2, description: "Description for Case Study 3", img: "/case-study-1/images/research-summary-1.png" },
+        { id: 3, description: "Description for Case Study 4", img: "/case-study-1/images/research-summary-1.png" }
+    ]
+
     const container = {
         hidden: {},
         show: {
@@ -36,7 +45,9 @@ function CollapsedCard() {
             </div>
             <div className='flex-1 flex flex-col gap-4'>
                 <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
-                <motion.div variants={item} className='bg-blue-200 rounded-lg flex-1'></motion.div>
+                <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg flex-1'>
+                    <CardSwitcher title="User Responses (highlights)" card_details={card_details} />
+                </motion.div>
             </div>
         </motion.div>
     )
