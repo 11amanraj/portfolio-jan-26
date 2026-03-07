@@ -8,8 +8,8 @@ const BentoLayout = ({ bento_content }: { bento_content: React.ReactNode[] }) =>
         hidden: {},
         show: {
             transition: {
-                staggerChildren: 0.4,
-                delayChildren: 1.5
+                staggerChildren: 0.3,
+                delayChildren: 0.4
             }
         }
     }
