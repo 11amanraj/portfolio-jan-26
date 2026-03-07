@@ -14,8 +14,9 @@ import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
 import CardSwitcher from '../Components/CaseStudy/CardSwitcher'
 import { CardDetail } from '../types/casestudy'
+import BentoLayout from '../Components/CaseStudy/BentoLayout'
 
-function CollapsedCard() {
+function ResearchBento() {
     const card_details: CardDetail[] = [
         {
             id: 0,
@@ -105,116 +106,83 @@ function CollapsedCard() {
         }
     ]
 
-    const container = {
-        hidden: {},
-        show: {
-            transition: {
-                staggerChildren: 0.4,
-                delayChildren: 1.5
-            }
-        }
-    }
+    const bentoTitle = (<>
+        <h3 className="text-[32px] font-heading font-bold">RESEARCH APPROACH</h3>
 
-    const item = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.4 } }
-    }
+        <div className='flex justify-between'>
+            <div className='flex gap-4 items-center'>
+                <ShuffleIcon sx={{ fontSize: 44 }} className='bg-black text-white rounded-sm' />
+                <p className='font-medium max-w-30 leading-5'>Mixed Method Approach</p>
+            </div>
+
+            <div className='flex gap-4 items-center'>
+                <AssignmentIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+                <p className='font-medium max-w-30 leading-5'>54 Survey Respondents</p>
+            </div>
+
+            <div className='flex gap-4 items-center'>
+                <RecordVoiceOverIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+                <p className='font-medium max-w-30 leading-5'>18 Interviews</p>
+            </div>
+        </div>
+
+        <div className='flex gap-4 items-center'>
+            <GroupIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+            <p><span className='text-black font-semibold'>Participants : </span><span className='font-light'>Frequent UPI users</span></p>
+        </div>
+
+        <div className='flex gap-4 items-center'>
+            <TrackChangesIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
+            <p><span className='text-black font-semibold'>Focus : </span><span className='font-light'>Payment behaviour and expense awareness</span></p>
+        </div>
+    </>)
+
+    const designOpportunities = (<>
+        <h3 className="text-[32px] font-heading font-bold">DESIGN OPPORTUNITIES</h3>
+        <div className='flex flex-col gap-6'>
+            <div className='flex flex-col'>
+                <h4 className='font-semibold'>Unified Financial Overview</h4>
+                <p>Give users a single place to understand their financial activity. Payments, expenses, and pending obligations should appear together.</p>
+            </div>
+
+            <div className='flex flex-col'>
+                <h4 className='font-semibold'>Passive Expense Tracking</h4>
+                <p>Reduce the effort required to monitor spending. Expenses should be automatically organized and summarized.</p>
+            </div>
+
+            <div className='flex flex-col'>
+                <h4 className='font-semibold'>Integrated Social Payments</h4>
+                <p>Make shared expenses easier to manage within everyday transactions. Pending balances and repayments should remain visible.</p>
+            </div>
+        </div>
+    </>)
+
+    const insightsSummary = (<><h3 className="text-[32px] font-heading font-bold">INSIGHTS SUMMARY</h3>
+        <div className='flex flex-col gap-6'>
+            <div className='flex flex-col'>
+                <h4 className='font-semibold'>Transaction Overload</h4>
+                <p>Frequent micro-payments make it difficult for users to track spending. Small daily expenses accumulate unnoticed, and many rely on bank balance.</p>
+            </div>
+
+            <div className='flex flex-col'>
+                <h4 className='font-semibold'>Fragmented Expense Visibility</h4>
+                <p>Transaction histories lack clarity and consistency. Merchant names vary across POS systems, making it harder for users to recognize spending.</p>
+            </div>
+
+            <div className='flex flex-col'>
+                <h4 className='font-semibold'>Friction in Shared Expenses</h4>
+                <p>Splitting bills introduces extra steps and limited visibility. Users struggle to track who has paid, while pending obligations often disappear.</p>
+            </div>
+        </div></>)
+
+    const userResponses = (<CardSwitcher title="User Responses (highlights)" card_details={card_details} />)
+
+    const needStatement = (<p className='text-[32px] font-heading font-bold'>Users who frequently make digital payments need a low-effort way to track personal and shared expenses so they can maintain financial awareness without manually reviewing transaction histories.</p>)
+
+    const bento_content = [bentoTitle, designOpportunities, insightsSummary, userResponses, needStatement]
 
     return (
-        <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className='w-full flex flex-col gap-4'
-        >
-            <div className='h-182 w-full flex gap-4'>
-                <div className='flex-1 flex flex-col gap-4'>
-                    <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
-                        <h3 className="text-[32px] font-heading font-bold">RESEARCH APPROACH</h3>
-
-                        <div className='flex justify-between'>
-                            <div className='flex gap-4 items-center'>
-                                <ShuffleIcon sx={{ fontSize: 44 }} className='bg-black text-white rounded-sm' />
-                                <p className='font-medium max-w-30 leading-5'>Mixed Method Approach</p>
-                            </div>
-
-                            <div className='flex gap-4 items-center'>
-                                <AssignmentIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
-                                <p className='font-medium max-w-30 leading-5'>54 Survey Respondents</p>
-                            </div>
-
-                            <div className='flex gap-4 items-center'>
-                                <RecordVoiceOverIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
-                                <p className='font-medium max-w-30 leading-5'>18 Interviews</p>
-                            </div>
-                        </div>
-
-                        <div className='flex gap-4 items-center'>
-                            <GroupIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
-                            <p><span className='text-black font-semibold'>Participants : </span><span className='font-light'>Frequent UPI users</span></p>
-                        </div>
-
-                        <div className='flex gap-4 items-center'>
-                            <TrackChangesIcon sx={{ fontSize: 44 }} className='text-black rounded-sm' />
-                            <p><span className='text-black font-semibold'>Focus : </span><span className='font-light'>Payment behaviour and expense awareness</span></p>
-                        </div>
-                    </motion.div>
-                    <motion.div variants={item} className='bg-[#E1F0F2] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
-                        <h3 className="text-[32px] font-heading font-bold">DESIGN OPPORTUNITIES</h3>
-                        <div className='flex flex-col gap-6'>
-                            <div className='flex flex-col'>
-                                <h4 className='font-semibold'>Unified Financial Overview</h4>
-                                <p>Give users a single place to understand their financial activity. Payments, expenses, and pending obligations should appear together.</p>
-                            </div>
-
-                            <div className='flex flex-col'>
-                                <h4 className='font-semibold'>Passive Expense Tracking</h4>
-                                <p>Reduce the effort required to monitor spending. Expenses should be automatically organized and summarized.</p>
-                            </div>
-
-                            <div className='flex flex-col'>
-                                <h4 className='font-semibold'>Integrated Social Payments</h4>
-                                <p>Make shared expenses easier to manage within everyday transactions. Pending balances and repayments should remain visible.</p>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-                <div className='flex-1 flex flex-col gap-4'>
-                    <motion.div variants={item} className='bg-[#E1F0F2] rounded-lg px-8 py-8 flex-1 flex flex-col gap-4 text-black'>
-                        <h3 className="text-[32px] font-heading font-bold">INSIGHTS SUMMARY</h3>
-                        <div className='flex flex-col gap-6'>
-                            <div className='flex flex-col'>
-                                <h4 className='font-semibold'>Transaction Overload</h4>
-                                <p>Frequent micro-payments make it difficult for users to track spending. Small daily expenses accumulate unnoticed, and many rely on bank balance.</p>
-                            </div>
-
-                            <div className='flex flex-col'>
-                                <h4 className='font-semibold'>Fragmented Expense Visibility</h4>
-                                <p>Transaction histories lack clarity and consistency. Merchant names vary across POS systems, making it harder for users to recognize spending.</p>
-                            </div>
-
-                            <div className='flex flex-col'>
-                                <h4 className='font-semibold'>Friction in Shared Expenses</h4>
-                                <p>Splitting bills introduces extra steps and limited visibility. Users struggle to track who has paid, while pending obligations often disappear.</p>
-                            </div>
-                        </div>
-                    </motion.div>
-                    <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg flex-1'>
-                        <CardSwitcher title="User Responses (highlights)" card_details={card_details} />
-                    </motion.div>
-                </div>
-            </div>
-            <div className='flex gap-4'>
-                <motion.div variants={item} className='bg-[#E1F0F2] p-8 text-black rounded-lg'>
-                    <p className='text-[32px] font-heading font-bold'>
-                        Users who frequently make digital payments need a low-effort way to track personal and shared expenses so they can maintain financial awareness without manually reviewing transaction histories.
-                    </p>
-                </motion.div>
-                <motion.div variants={item} className='bg-[#EDE4F3] rounded-lg w-340'>
-                    Working
-                </motion.div>
-            </div>
-        </motion.div>
+        <BentoLayout bento_content={bento_content} />
     )
 }
 
@@ -243,7 +211,9 @@ const page = () => {
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
                 </ContentSection>
 
-                <CollapsibleSection collapsed={<CollapsedCard />} expanded={<ExpandedCard />} title='Understanding the Problem' />
+                <CollapsibleSection summary={<ResearchBento />} expanded={<ExpandedCard />} title='Understanding the Problem' />
+
+                <CollapsibleSection summary={<ResearchBento />} expanded={<ExpandedCard />} title='Design Exploration' />
 
                 <ContentSection title="Solution">
                     <div className='bg-white w-full h-244'></div>
