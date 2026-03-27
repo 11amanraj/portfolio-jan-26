@@ -192,6 +192,10 @@ function ResearchDetails() {
     )
 }
 
+// function DesignBento() {
+//         return (BentoLayout bento_content={[]} />)
+// }
+
 const page = () => {
     return (
         <div className='flex flex-col'>
