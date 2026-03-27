@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react"
+import InteractiveCardScroll from "./Components/Interactions/InteractiveCardScroll";
 
 export default function Home() {
 
@@ -10,6 +11,8 @@ export default function Home() {
       <h1>
         Aman's Portfolio
       </h1>
+
+      <InteractiveCardScroll />
 
       <div>
         <Link href="/case-study-1">Case Study 1</Link>
