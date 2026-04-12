@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const PLUS_WIDTH = 36;
 
@@ -48,6 +48,28 @@ const plusRight = {
     }
 };
 
+const text = "SEE OUR PRICING";
+
+const container = {
+    rest: {},
+    hover: {}
+};
+
+const letter: Variants = {
+    rest: {
+        color: "#000000",
+    },
+    hover: (i: number) => ({
+        color: ["#000000", "#ffffff", "#000000"],
+        transition: {
+            duration: 0.2,
+            times: [0, 0.5, 1],
+            delay: i * 0.015,
+            ease: "easeInOut"
+        }
+    })
+};
+
 const HoverShiftButton = () => {
     return (
         <motion.button
@@ -70,9 +92,21 @@ const HoverShiftButton = () => {
                 </motion.div>
             </motion.div>
 
-            <div className='bg-red-600 px-3 py-1 text-black whitespace-nowrap'>
-                SEE OUR PRICING
-            </div>
+            <motion.div
+                variants={container}
+                className="bg-red-600 px-3 py-1 flex whitespace-nowrap"
+            >
+                {text.split("").map((char, i) => (
+                    <motion.span
+                        key={i}
+                        variants={letter}
+                        custom={i}
+                        className="inline-block"
+                    >
+                        {char === " " ? "\u00A0" : char}
+                    </motion.span>
+                ))}
+            </motion.div>
 
             <motion.div
                 variants={containerRight}
