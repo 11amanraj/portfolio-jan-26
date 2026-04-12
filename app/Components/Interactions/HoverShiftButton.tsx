@@ -81,12 +81,12 @@ const HoverShiftButton = () => {
             <motion.div
                 variants={containerLeft}
                 className="overflow-hidden flex items-center justify-center"
-                transition={{ duration: 0.35 }}
+                transition={{ duration: 0.35, delay: 0.25 }}
             >
                 <motion.div
-                    className='bg-red-600 px-3 py-1 text-black'
+                    className='bg-red-600 text-black flex-1 text-2xl'
                     variants={plusLeft}
-                    transition={{ duration: 0.35 }}
+                    transition={{ duration: 0.35, delay: 0.25 }}
                 >
                     +
                 </motion.div>
@@ -101,7 +101,7 @@ const HoverShiftButton = () => {
                         key={i}
                         variants={letter}
                         custom={i}
-                        className="inline-block"
+                        className="inline-block font-semibold"
                     >
                         {char === " " ? "\u00A0" : char}
                     </motion.span>
@@ -111,12 +111,12 @@ const HoverShiftButton = () => {
             <motion.div
                 variants={containerRight}
                 className="overflow-hidden flex items-center justify-center"
-                transition={{ duration: 0.25 }}
+                transition={{ duration: 0.25, delay: 0.25 }}
             >
                 <motion.div
-                    className='bg-red-600 px-3 py-1 text-black'
+                    className='bg-red-600 text-black flex-1 text-2xl'
                     variants={plusRight}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.25, delay: 0.25 }}
                 >
                     +
                 </motion.div>
