@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
+import Image from "next/image"
 
 const BRAND = "#c47a8a"
 const BRAND_IMG = "#d4607a"
@@ -53,7 +54,12 @@ const CardContent = ({ cart, qty, onAddToCart, onRemove, onIncrement }: CardCont
                 className="mx-[24px] mt-[60px] h-[160px] relative overflow-hidden"
                 style={{ background: s.imgBg }}
             >
-
+                <Image
+                    src="/micro-interactions/clothing-item-1/main.png"
+                    alt="Silk Wrap Midi Dress"
+                    fill
+                    className="object-cover object-center"
+                />
             </div>
 
             {/* Divider */}
