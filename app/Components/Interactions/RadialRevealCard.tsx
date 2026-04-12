@@ -7,32 +7,32 @@ const BRAND = "#c47a8a"
 const BRAND_IMG = "#d4607a"
 
 const getStyles = (cart: boolean) => ({
-    bg:               cart ? BRAND       : "#ffffff",
-    border:           cart ? "#ffffff"   : "#0d0d0d",
-    imgBg:            cart ? BRAND_IMG   : "#f0ede8",
-    diagColor:        cart ? BRAND       : "#e0d8d0",
-    dividerColor:     cart ? "#ffffff"   : "#0d0d0d",
-    badgeBg:          cart ? "#ffffff"   : "#0d0d0d",
-    badgeText:        cart ? BRAND       : "#ffffff",
-    badgeLabel:       cart ? "✓ IN CART" : "NEW ARRIVAL",
-    captionColor:     cart ? "rgba(255,255,255,0.8)"  : "#9a8e84",
-    brandColor:       cart ? "rgba(255,255,255,0.65)" : "#9a8e84",
-    titleColor:       cart ? "#ffffff"   : "#0d0d0d",
-    starFill:         cart ? "#ffffff"   : "#e8a050",
-    starEmpty:        cart ? "rgba(255,255,255,0.5)"  : "#d0c8c0",
-    ratingColor:      cart ? "rgba(255,255,255,0.65)" : "#9a8e84",
-    priceColor:       cart ? "#ffffff"   : "#0d0d0d",
+    bg: cart ? BRAND : "#ffffff",
+    border: cart ? "#ffffff" : "#0d0d0d",
+    imgBg: cart ? BRAND_IMG : "#f0ede8",
+    diagColor: cart ? BRAND : "#e0d8d0",
+    dividerColor: cart ? "#ffffff" : "#0d0d0d",
+    badgeBg: cart ? "#ffffff" : "#0d0d0d",
+    badgeText: cart ? BRAND : "#ffffff",
+    badgeLabel: cart ? "✓ IN CART" : "NEW ARRIVAL",
+    captionColor: cart ? "rgba(255,255,255,0.8)" : "#9a8e84",
+    brandColor: cart ? "rgba(255,255,255,0.65)" : "#9a8e84",
+    titleColor: cart ? "#ffffff" : "#0d0d0d",
+    starFill: cart ? "#ffffff" : "#e8a050",
+    starEmpty: cart ? "rgba(255,255,255,0.5)" : "#d0c8c0",
+    ratingColor: cart ? "rgba(255,255,255,0.65)" : "#9a8e84",
+    priceColor: cart ? "#ffffff" : "#0d0d0d",
     strikePriceColor: cart ? "rgba(255,255,255,0.65)" : "#b0a8a0",
-    discountColor:    cart ? "rgba(255,255,255,0.85)" : "#2d8a6e",
-    labelColor:       cart ? "rgba(255,255,255,0.65)" : "#0d0d0d",
-    swatchBorder:     cart ? "#ffffff"   : "#0d0d0d",
-    sizeSelBg:        cart ? "#ffffff"   : "#0d0d0d",
-    sizeSelText:      cart ? BRAND       : "#ffffff",
-    sizeOtherBorder:  cart ? "#ffffff"   : "#0d0d0d",
-    sizeOtherText:    cart ? "#ffffff"   : "#0d0d0d",
-    ctaBg:            cart ? "#ffffff"   : "#0d0d0d",
-    ctaText:          cart ? BRAND       : "#ffffff",
-    footerColor:      cart ? "rgba(255,255,255,0.7)"  : "#9a8e84",
+    discountColor: cart ? "rgba(255,255,255,0.85)" : "#2d8a6e",
+    labelColor: cart ? "rgba(255,255,255,0.65)" : "#0d0d0d",
+    swatchBorder: cart ? "#ffffff" : "#0d0d0d",
+    sizeSelBg: cart ? "#ffffff" : "#0d0d0d",
+    sizeSelText: cart ? BRAND : "#ffffff",
+    sizeOtherBorder: cart ? "#ffffff" : "#0d0d0d",
+    sizeOtherText: cart ? "#ffffff" : "#B4B4B4",
+    ctaBg: cart ? "#ffffff" : "#0d0d0d",
+    ctaText: cart ? BRAND : "#ffffff",
+    footerColor: cart ? "rgba(255,255,255,0.7)" : "#9a8e84",
 })
 
 interface CardContentProps {
@@ -47,41 +47,13 @@ const CardContent = ({ cart, qty, onAddToCart, onRemove, onIncrement }: CardCont
     const s = getStyles(cart)
 
     return (
-        <div style={{ background: s.bg }}>
-
-            {/* Badge */}
-            <div
-                className="absolute top-[24px] left-[24px] h-[22px] flex items-center px-[8px]"
-                style={{ background: s.badgeBg }}
-            >
-                <span className="text-[9px] font-bold tracking-[1.2px]" style={{ color: s.badgeText }}>
-                    {s.badgeLabel}
-                </span>
-            </div>
-
+        <div style={{ background: s.bg, paddingTop: "1px" }}>
             {/* Product Image */}
             <div
                 className="mx-[24px] mt-[60px] h-[160px] relative overflow-hidden"
                 style={{ background: s.imgBg }}
             >
-                {/* Diagonal lines */}
-                <div className="absolute inset-0">
-                    <div
-                        className="absolute left-[-10%] w-[120%] h-[2px]"
-                        style={{ top: "38%", background: s.diagColor, transform: "rotate(15deg)" }}
-                    />
-                    <div
-                        className="absolute left-[-10%] w-[120%] h-[2px]"
-                        style={{ top: "60%", background: s.diagColor, transform: "rotate(15deg)" }}
-                    />
-                </div>
-                {/* Caption */}
-                <p
-                    className="absolute bottom-[12px] left-[8px] text-[9px] font-medium"
-                    style={{ color: s.captionColor }}
-                >
-                    [ SILK WRAP MIDI DRESS ]
-                </p>
+
             </div>
 
             {/* Divider */}
@@ -177,20 +149,20 @@ const CardContent = ({ cart, qty, onAddToCart, onRemove, onIncrement }: CardCont
                 </div>
 
                 {/* Footer */}
-                <div className="mt-[12px] mb-[24px] flex flex-col items-center">
+                <div className="mt-[12px] mb-[24px] h-[20px] flex flex-col items-center justify-center">
                     {!cart ? (
                         <p className="text-[11px] font-medium" style={{ color: s.footerColor }}>♥  Save to Wishlist</p>
                     ) : (
-                        <>
+                        <div className="flex flex-col items-center gap-[3px]">
                             <p
                                 onClick={onRemove}
-                                className="text-[11px] font-medium cursor-pointer"
+                                className="text-[11px] font-medium cursor-pointer leading-none"
                                 style={{ color: s.footerColor }}
                             >
                                 × Remove from Cart
                             </p>
-                            <div className="h-px w-[106px] mt-[4px]" style={{ background: "rgba(255,255,255,0.7)" }} />
-                        </>
+                            <div className="h-px w-[106px]" style={{ background: "rgba(255,255,255,0.7)" }} />
+                        </div>
                     )}
                 </div>
 
