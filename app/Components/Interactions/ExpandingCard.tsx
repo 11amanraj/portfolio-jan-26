@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 type Item = {
     id: number;
@@ -11,12 +12,13 @@ type Item = {
     originalPrice: string;
     discount: string;
     badge: string;
+    imageFolder: string;
 };
 
 const items: Item[] = [
-    { id: 1, title: "Silk Wrap Midi Dress", brand: "MAISON ÉDITH", price: "₹4,299", originalPrice: "₹6,499", discount: "34% off", badge: "SALE" },
-    { id: 2, title: "Linen Blazer Coat", brand: "ATELIER NOV", price: "₹5,199", originalPrice: "₹7,999", discount: "35% off", badge: "NEW" },
-    { id: 3, title: "Cashmere Knit Top", brand: "MAISON ÉDITH", price: "₹3,499", originalPrice: "₹4,999", discount: "30% off", badge: "SALE" },
+    { id: 1, title: "Silk Wrap Midi Dress", brand: "MAISON ÉDITH", price: "₹4,299", originalPrice: "₹6,499", discount: "34% off", badge: "SALE", imageFolder: "/micro-interactions/clothing-item-1" },
+    { id: 2, title: "Linen Blazer Coat", brand: "ATELIER NOV", price: "₹5,199", originalPrice: "₹7,999", discount: "35% off", badge: "NEW", imageFolder: "/micro-interactions/clothing-item-2" },
+    { id: 3, title: "Cashmere Knit Top", brand: "MAISON ÉDITH", price: "₹3,499", originalPrice: "₹4,999", discount: "30% off", badge: "SALE", imageFolder: "/micro-interactions/clothing-item-3" },
 ];
 
 const EXPAND_DURATION = 0.35;
@@ -41,8 +43,13 @@ const ExpandingCard = () => {
                         }}
                     >
                         {/* Image BG */}
-                        <div className="w-full h-[210px] bg-[#f0ede8] relative flex items-center justify-center">
-                            <div className="w-[72px] h-[72px] bg-[#d4c9ba] rounded-[8px]" />
+                        <div className="w-full h-[210px] bg-[#f0ede8] relative overflow-hidden">
+                            <Image
+                                src={`${item.imageFolder}/main.png`}
+                                alt={item.title}
+                                fill
+                                className="object-cover object-center"
+                            />
 
                             {/* Sale badge */}
                             <div className="absolute top-[12px] left-[12px] bg-[#1a1a1a] rounded-[12px] px-[10px] h-[24px] flex items-center">
@@ -120,16 +127,30 @@ const ExpandingCard = () => {
                                 {/* Left Panel — beige image area */}
                                 <div className="w-[340px] h-full bg-[#f5f1ec] relative flex-shrink-0 overflow-hidden">
                                     {/* Main product image */}
-                                    <div className="absolute left-[20px] top-[20px] w-[300px] h-[380px] bg-[#e8e0d4] rounded-[16px] flex items-center justify-center">
-                                        <div className="w-[60px] h-[60px] bg-[#cec4b8] rounded-[6px]" />
+                                    <div className="absolute left-[20px] top-[20px] w-[300px] h-[380px] bg-[#e8e0d4] rounded-[16px] overflow-hidden">
+                                        <Image
+                                            src={`${active.imageFolder}/main.png`}
+                                            alt={active.title}
+                                            fill
+                                            className="object-cover object-center"
+                                        />
                                     </div>
 
                                     {/* Thumbnails */}
                                     <div className="absolute top-[418px] left-[20px] flex gap-[8px]">
-                                        <div className="w-[62px] h-[62px] bg-[#e8e0d4] border-2 border-[#1a1a1a] rounded-[10px]" />
-                                        <div className="w-[62px] h-[62px] bg-[#d8d0c4] rounded-[10px]" />
-                                        <div className="w-[62px] h-[62px] bg-[#c8c0b4] rounded-[10px]" />
-                                        <div className="w-[62px] h-[62px] bg-[#b8b0a4] rounded-[10px]" />
+                                        {(["main", "gallery_1", "gallery_2", "gallery_3"] as const).map((img, i) => (
+                                            <div
+                                                key={img}
+                                                className={`w-[62px] h-[62px] relative rounded-[10px] overflow-hidden ${i === 0 ? "border-2 border-[#1a1a1a]" : ""}`}
+                                            >
+                                                <Image
+                                                    src={`${active.imageFolder}/${img}.png`}
+                                                    alt={`${active.title} view ${i + 1}`}
+                                                    fill
+                                                    className="object-cover object-center"
+                                                />
+                                            </div>
+                                        ))}
                                     </div>
 
                                     {/* Hover to zoom */}
