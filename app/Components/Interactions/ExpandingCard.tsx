@@ -13,12 +13,15 @@ type Item = {
     discount: string;
     badge: string;
     imageFolder: string;
+    selectedSwatch: number;
 };
 
+const SWATCHES = ["#c8b8a8", "#1a1a1a", "#8b6e6e", "#4a6b8a", "#6b8a6e"];
+
 const items: Item[] = [
-    { id: 1, title: "Silk Wrap Midi Dress", brand: "MAISON ÉDITH", price: "₹4,299", originalPrice: "₹6,499", discount: "34% off", badge: "SALE", imageFolder: "/micro-interactions/clothing-item-1" },
-    { id: 2, title: "Linen Blazer Coat", brand: "ATELIER NOV", price: "₹5,199", originalPrice: "₹7,999", discount: "35% off", badge: "NEW", imageFolder: "/micro-interactions/clothing-item-2" },
-    { id: 3, title: "Cashmere Knit Top", brand: "MAISON ÉDITH", price: "₹3,499", originalPrice: "₹4,999", discount: "30% off", badge: "SALE", imageFolder: "/micro-interactions/clothing-item-3" },
+    { id: 1, title: "Silk Wrap Midi Dress", brand: "MAISON ÉDITH", price: "₹4,299", originalPrice: "₹6,499", discount: "34% off", badge: "SALE", imageFolder: "/micro-interactions/clothing-item-1", selectedSwatch: 0 },
+    { id: 2, title: "Linen Blazer Coat", brand: "ATELIER NOV", price: "₹5,199", originalPrice: "₹7,999", discount: "35% off", badge: "NEW", imageFolder: "/micro-interactions/clothing-item-2", selectedSwatch: 3 },
+    { id: 3, title: "Cashmere Knit Top", brand: "MAISON ÉDITH", price: "₹3,499", originalPrice: "₹4,999", discount: "30% off", badge: "SALE", imageFolder: "/micro-interactions/clothing-item-3", selectedSwatch: 1 },
 ];
 
 const EXPAND_DURATION = 0.35;
@@ -86,10 +89,13 @@ const ExpandingCard = () => {
 
                             {/* Swatches */}
                             <div className="flex items-center gap-[6px]">
-                                <div className="w-[16px] h-[16px] rounded-[8px] bg-[#c8b8a8] border-2 border-[#1a1a1a]" />
-                                <div className="w-[16px] h-[16px] rounded-[8px] bg-[#1a1a1a]" />
-                                <div className="w-[16px] h-[16px] rounded-[8px] bg-[#8b6e6e]" />
-                                <div className="w-[16px] h-[16px] rounded-[8px] bg-[#4a6b8a]" />
+                                {SWATCHES.slice(0, 4).map((color, i) => (
+                                    <div
+                                        key={color}
+                                        className={`w-[16px] h-[16px] rounded-[8px] ${i === item.selectedSwatch ? "border-2 border-[#888888]" : ""}`}
+                                        style={{ backgroundColor: color }}
+                                    />
+                                ))}
                                 <span className="text-[#9a8e84] text-[11px]">+2</span>
                             </div>
                         </div>
@@ -217,11 +223,13 @@ const ExpandingCard = () => {
                                         {/* Color */}
                                         <p className="text-[#1a1a1a] text-[12px] font-medium mt-[16px] mb-[8px]">Color — Ivory Sand</p>
                                         <div className="flex items-center gap-[8px]">
-                                            <div className="w-[28px] h-[28px] rounded-[14px] bg-[#c8b8a8] border-2 border-[#1a1a1a]" />
-                                            <div className="w-[28px] h-[28px] rounded-[14px] bg-[#1a1a1a]" />
-                                            <div className="w-[28px] h-[28px] rounded-[14px] bg-[#8b6e6e]" />
-                                            <div className="w-[28px] h-[28px] rounded-[14px] bg-[#4a6b8a]" />
-                                            <div className="w-[28px] h-[28px] rounded-[14px] bg-[#6b8a6e]" />
+                                            {SWATCHES.map((color, i) => (
+                                                <div
+                                                    key={color}
+                                                    className={`w-[28px] h-[28px] rounded-[14px] ${i === active.selectedSwatch ? "border-2 border-[#888888]" : ""}`}
+                                                    style={{ backgroundColor: color }}
+                                                />
+                                            ))}
                                         </div>
 
                                         {/* Size */}
