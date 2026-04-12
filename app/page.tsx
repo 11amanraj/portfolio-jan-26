@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { motion } from "motion/react"
 import InteractiveCardScroll from "./Components/Interactions/InteractiveCardScroll";
+import ExpandingCard from "./Components/Interactions/ExpandingCard";
+import ExpandingCarousel from "./Components/Interactions/ExpandingCarousel";
+import RadialRevealCard from "./Components/Interactions/RadialRevealCard";
+import HoverShiftButton from "./Components/Interactions/HoverShiftButton";
 
 export default function Home() {
 
@@ -11,6 +15,11 @@ export default function Home() {
       <h1>
         Aman's Portfolio
       </h1>
+
+      <HoverShiftButton />
+      <ExpandingCard />
+      <ExpandingCarousel />
+      <RadialRevealCard />
 
       <InteractiveCardScroll />
 
