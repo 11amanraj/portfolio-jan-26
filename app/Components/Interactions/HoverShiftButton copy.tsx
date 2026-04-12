@@ -79,13 +79,28 @@ const HoverShiftButton = () => {
             animate="rest"
             whileHover="hover"
         >
+
+            {/* <motion.div
+                variants={containerLeft}
+                className="bg-red-600 text-black flex-1 self-stretch overflow-hidden flex items-center justify-center"
+                transition={{ duration: 0.25, delay: 0.25 }}
+            >
+                <motion.div
+                    className='flex-1 flex items-center justify-center'
+                    variants={plusLeft}
+                    transition={{ duration: 0.25, delay: 0.25 }}
+                >
+                    <AddIcon />
+                </motion.div>
+            </motion.div> */}
+
             <motion.div
                 variants={containerLeft}
-                className="text-black self-stretch overflow-hidden flex items-center justify-center"
+                className="bg-red-600 text-black self-stretch overflow-hidden flex items-center justify-center"
                 transition={{ duration: 0.35, delay: 0.25 }}
             >
                 <motion.div
-                    className='bg-red-600 h-full w-full flex items-center justify-center'
+                    className='flex items-center justify-center'
                     variants={plusLeft}
                     transition={{ duration: 0.35, delay: 0.25 }}
                 >
@@ -111,11 +126,11 @@ const HoverShiftButton = () => {
 
             <motion.div
                 variants={containerRight}
-                className=" text-black  self-stretch overflow-hidden flex items-center justify-center"
+                className="bg-red-600 text-black flex-1 self-stretch overflow-hidden flex items-center justify-center"
                 transition={{ duration: 0.25, delay: 0.25 }}
             >
                 <motion.div
-                    className='bg-red-600 h-full w-full flex items-center justify-center'
+                    className='flex-1 flex items-center justify-center'
                     variants={plusRight}
                     transition={{ duration: 0.25, delay: 0.25 }}
                 >
