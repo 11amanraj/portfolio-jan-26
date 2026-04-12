@@ -48,7 +48,7 @@ const plusRight = {
     }
 };
 
-const text = "SEE OUR PRICING";
+const text = "ADD TO CART";
 
 const container = {
     rest: {},
