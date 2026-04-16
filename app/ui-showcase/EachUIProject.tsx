@@ -128,8 +128,7 @@ export default function EachUIProject({
             >
                 {/* Left Panel */}
                 <div
-                    className="w-145 h-full flex flex-col pt-32 relative shrink-0"
-                    style={{ paddingLeft: 'clamp(40px, calc((100vw - 1536px) * 0.234375 + 40px), 130px)' }}
+                    className="w-145 h-full flex flex-col pt-32 pl-32 relative shrink-0"
                 >
                     <div className="flex flex-col gap-30">
                         <div className="flex flex-col gap-4">
