@@ -21,6 +21,7 @@ const poppins = Poppins({
   display: "swap"
 })
 
+
 export const metadata: Metadata = {
   title: "Aman's Portfolio",
   description: "Aman's Portfolio",
