@@ -128,7 +128,8 @@ export default function EachUIProject({
             >
                 {/* Left Panel */}
                 <div
-                    className="w-145 h-full flex flex-col pt-32 pl-32 relative shrink-0"
+                    className="h-full flex flex-col pt-32 pl-32 relative shrink-0"
+                    style={{ width: 'clamp(448px, calc(448px + (100vw - 1024px) * 0.14732), 580px)' }}
                 >
                     <div className="flex flex-col gap-30">
                         <div className="flex flex-col gap-4">
@@ -145,7 +146,7 @@ export default function EachUIProject({
                                 {projectName}
                             </h1>
                             <p
-                                className="text-[32px] max-w-114 font-heading font-medium"
+                                className="text-[24px] max-w-80 font-heading font-medium"
                                 style={{ color: colors.textMuted }}
                             >
                                 {description}
@@ -204,7 +205,8 @@ export default function EachUIProject({
                 </div>
 
                 {/* Right Panel — mockup image */}
-                <div className="flex-1 h-full flex items-center justify-center p-32 2xl:p-16">
+                <div className="flex-1 h-full flex items-center justify-center"
+                    style={{ padding: 'clamp(16px, calc(16px + (100vw - 1024px) * 0.12500), 128px)' }}>
                     <div className="relative w-full h-full">
                         <Image
                             src="/ui-showcase/screen.png"
