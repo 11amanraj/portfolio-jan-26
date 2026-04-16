@@ -133,22 +133,24 @@ export default function Page() {
                     </div>
 
                     {/* Right Panel — mockup image */}
-                    <div className="outline-1 flex-1 h-full relative p-32">
-                        <Image
-                            src="/ui-showcase/screen.png"
-                            alt={`${slide.projectName} app screens`}
-                            fill
-                            className="object-contain"
-                        />
+                    <div className="flex-1 h-full flex items-center justify-center p-32">
+                        <div className="relative w-full h-full">
+                            <Image
+                                src="/ui-showcase/screen.png"
+                                alt={`${slide.projectName} app screens`}
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
                     </div>
 
                     {/* UI SHOWCASE — vertical right edge text */}
                     <div
-                        className="absolute right-10 top-1/2 text-[11px] font-medium tracking-[0.4em] uppercase select-none"
+                        className='absolute -bottom-5 right-5 font-heading tracking-widest text-2xl font-bold uppercase'
                         style={{
                             color: slide.colors.showcaseText,
                             writingMode: 'vertical-rl',
-                            transform: 'translateY(-50%) rotate(180deg)',
+                            transform: 'translateY(-50%)',
                         }}
                     >
                         UI SHOWCASE
