@@ -125,7 +125,6 @@ export default function Page() {
                                 fontSize: '260px',
                                 color: slide.colors.textPrimary,
                                 opacity: 0.06,
-                                lineHeight: 1,
                             }}
                         >
                             {slide.slideNumber}
@@ -146,11 +145,10 @@ export default function Page() {
 
                     {/* UI SHOWCASE — vertical right edge text */}
                     <div
-                        className='absolute -bottom-5 right-5 font-heading tracking-widest text-2xl font-bold uppercase'
+                        className='absolute bottom-30 right-5 font-heading tracking-widest text-2xl font-bold uppercase'
                         style={{
                             color: slide.colors.showcaseText,
                             writingMode: 'vertical-rl',
-                            transform: 'translateY(-50%)',
                         }}
                     >
                         UI SHOWCASE
