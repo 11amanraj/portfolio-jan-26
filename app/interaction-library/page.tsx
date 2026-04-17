@@ -1,10 +1,3 @@
-// import Image from "next/image"
-
-// const PHONE = "/micro-interactions/previews/left-phone.png"
-// const MODAL = "/micro-interactions/previews/top-left-modal.png"
-// const CART = "/micro-interactions/previews/top-right-cart.png"
-// const SCORERS = "/micro-interactions/previews/bottom-scorers.png"
-
 export default function Page() {
     return (
         <div
@@ -16,8 +9,24 @@ export default function Page() {
                 01
             </div>
 
-            <div className="bg-amber-500 flex-1">
+            <div className="flex-1 flex gap-3">
 
+                <div className="bg-white flex-1 max-w-150 rounded-sm">
+                </div>
+
+                <div className="flex-1 flex flex-col gap-3">
+                    <div className="flex-1 flex gap-3">
+                        <div className="bg-white flex-1 rounded-sm">
+
+                        </div>
+
+                        <div className="bg-white flex-1 rounded-sm">
+
+                        </div>
+                    </div>
+
+                    <div className="bg-white flex-1 rounded-sm"></div>
+                </div>
             </div>
 
             {/* Card grid — fills between watermark and bottom gutter */}
@@ -38,23 +47,6 @@ export default function Page() {
                     Interaction Library
                 </span>
             </div>
-
-            {/* <div
-                className="absolute flex items-center justify-center font-bold text-2xl text-[#535353]"
-                style={{
-                    right: 48,
-                    bottom: 48,
-                    writingMode: 'vertical-rl'
-                }}
-            >
-                Interaction Library
-                <span
-                    className="text-[#535353] font-bold uppercase text-2xl tracking-[2.64px] whitespace-nowrap"
-                    style={{ writingMode: 'vertical-rl' }}
-                >
-                    Interaction Library
-                </span>
-            </div> */}
         </div>
     )
 }
