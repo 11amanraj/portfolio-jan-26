@@ -2,7 +2,12 @@
 
 import { AnimatePresence, motion } from "motion/react"
 import { useState, useEffect } from "react"
-import { CardDetail } from "@/app/types/casestudy"
+
+interface CardDetail {
+    id: number
+    img: string
+    description: string
+}
 
 const CardSwitcher = ({ card_details, title }: { card_details: CardDetail[], title: string }) => {
     const [activeCard, setActiveCard] = useState(0)
