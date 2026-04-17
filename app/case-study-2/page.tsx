@@ -13,7 +13,11 @@ import TitleSection from '../Components/CaseStudy/TitleSection'
 import ContentSection from '../Components/CaseStudy/ContentSection'
 import CollapsibleSection from '../Components/CaseStudy/CollapsibleSection'
 import CardSwitcher from '../Components/CaseStudy/CardSwitcher'
-import { CardDetail } from '../types/casestudy'
+interface CardDetail {
+    id: number
+    img: string
+    description: React.ReactNode
+}
 import BentoLayout from '../Components/CaseStudy/BentoLayout'
 
 function ResearchBento() {

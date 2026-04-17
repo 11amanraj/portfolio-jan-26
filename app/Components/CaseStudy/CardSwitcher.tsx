@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 interface CardDetail {
     id: number
     img: string
-    description: string
+    description: React.ReactNode
 }
 
 const CardSwitcher = ({ card_details, title }: { card_details: CardDetail[], title: string }) => {
