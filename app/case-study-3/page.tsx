@@ -1,10 +1,10 @@
 'use client'
 
-import React from 'react'
+import { Suspense } from 'react'
 import { motion } from 'motion/react'
 import { useSearchParams } from "next/navigation";
 
-const page = () => {
+const CaseStudy3Content = () => {
     const params = useSearchParams()
     const id = params.get("id")
 
@@ -25,6 +25,14 @@ const page = () => {
                 <p>Is this working?</p>
             </motion.div>
         </div>
+    )
+}
+
+const page = () => {
+    return (
+        <Suspense>
+            <CaseStudy3Content />
+        </Suspense>
     )
 }
 
