@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 const page = () => {
     return (
@@ -14,10 +15,10 @@ const page = () => {
         >
 
             {/* Card grid */}
-            {/* <div className="flex gap-4 h-full">
+            <div className="flex gap-3 h-full">
 
                 {/* Left — tall phone card */}
-            {/* <div className="w-[688px] shrink-0 bg-[#060606] rounded relative overflow-hidden">
+                <div className="w-[516px] shrink-0 bg-[#060606] rounded relative overflow-hidden">
                     <Image
                         src="/micro-interactions/previews/left-phone.png"
                         alt="Phone interaction"
@@ -27,13 +28,13 @@ const page = () => {
                 </div>
 
                 {/* Right column */}
-            {/* <div className="flex-1 flex flex-col gap-4">
+                <div className="flex-1 flex flex-col gap-3">
 
                     {/* Top row */}
-            {/* <div className="flex gap-4 h-[480px] shrink-0">
+                    <div className="flex gap-3 h-[360px] shrink-0">
 
                         {/* Top-left — modal */}
-            {/* <div className="flex-1 bg-[#060606] rounded relative overflow-hidden">
+                        <div className="flex-1 bg-[#060606] rounded relative overflow-hidden">
                             <Image
                                 src="/micro-interactions/previews/top-left-modal.png"
                                 alt="Modal interaction"
@@ -43,7 +44,7 @@ const page = () => {
                         </div>
 
                         {/* Top-right — add to cart */}
-            {/* <div className="w-[480px] shrink-0 bg-[#060606] rounded relative overflow-hidden">
+                        <div className="w-[360px] shrink-0 bg-[#060606] rounded relative overflow-hidden">
                             <Image
                                 src="/micro-interactions/previews/top-right-cart.png"
                                 alt="Add to cart interaction"
@@ -55,7 +56,7 @@ const page = () => {
                     </div>
 
                     {/* Bottom — scorers */}
-            {/* <div className="flex-1 bg-[#0c1120] rounded relative overflow-hidden">
+                    <div className="flex-1 bg-[#0c1120] rounded relative overflow-hidden">
                         <Image
                             src="/micro-interactions/previews/bottom-scorers.png"
                             alt="Top scorers interaction"
@@ -65,15 +66,16 @@ const page = () => {
                     </div>
 
                 </div>
-            </div> */}
+            </div>
 
             {/* Page number watermark */}
             <div
-                className="absolute -bottom-12 left-16 font-bold leading-none select-none pointer-events-none"
+                className="absolute -bottom-12 left-16 opacity-50 font-bold leading-none select-none pointer-events-none"
                 style={{
                     fontFamily: 'var(--font-poppins)',
                     fontSize: '260px',
-                    color: '#D5D3D3',
+                    color: '#666666',
+                    WebkitTextStroke: '1px #666666',
                 }}
             >
                 01
@@ -82,7 +84,7 @@ const page = () => {
             {/* Vertical label — right edge */}
             <div
                 className="absolute bottom-16 right-5 font-heading tracking-widest text-2xl font-bold uppercase"
-                style={{ color: '#D5D3D3', writingMode: 'vertical-rl' }}
+                style={{ color: '#666666', writingMode: 'vertical-rl' }}
             >
                 INTERACTION LIBRARY
             </div>

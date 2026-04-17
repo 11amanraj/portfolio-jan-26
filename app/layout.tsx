@@ -46,11 +46,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${lora.variable} font-sans antialiased`}
       >
-        <NavBar />
+        {/* <NavBar /> */}
         <LayoutGroup>
           {children}
         </LayoutGroup>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
