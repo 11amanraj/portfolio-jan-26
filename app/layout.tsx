@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google"
+import { Inter, Poppins, Lora } from "next/font/google"
 import "./globals.css";
 import { LayoutGroup } from "motion/react";
+import NavBar from "./Components/Navigation/NavBar";
+import Footer from "./Components/Footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,6 +23,13 @@ const poppins = Poppins({
   display: "swap"
 })
 
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-lora",
+  display: "swap"
+})
+
 
 export const metadata: Metadata = {
   title: "Aman's Portfolio",
@@ -35,11 +44,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${lora.variable} font-sans antialiased`}
       >
+        <NavBar />
         <LayoutGroup>
           {children}
         </LayoutGroup>
+        <Footer />
       </body>
     </html>
   );
