@@ -1,7 +1,15 @@
 'use client';
 import React from 'react'
 import Tags from './Tags'
-import { Project } from '@/app/Types/Interface'
+interface Project {
+  id: number
+  title: string
+  description: string
+  tags: string[]
+  caseStudyLink: string
+  resourceLink: string
+  image: string
+}
 import ActionLink from './ActionLink';
 
 interface ProjectCardsProps {

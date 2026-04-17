@@ -1,5 +1,13 @@
 import ProjectCards from './ProjectCards'
-import { Project } from '@/app/Types/Interface'
+interface Project {
+  id: number
+  title: string
+  description: string
+  tags: string[]
+  caseStudyLink: string
+  resourceLink: string
+  image: string
+}
 
 const ProjectsList = () => {
   const design_projects: Project[] = [
