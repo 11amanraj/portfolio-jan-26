@@ -1,52 +1,11 @@
-'use client'
-
-import Link from "next/link";
-import { motion } from "motion/react"
-import InteractiveCardScroll from "./Components/Interactions/InteractiveCardScroll";
-import ExpandingCard from "./Components/Interactions/ExpandingCard";
-import ExpandingCarousel from "./Components/Interactions/ExpandingCarousel";
-import RadialRevealCard from "./Components/Interactions/RadialRevealCard";
-import HoverShiftButton from "./Components/Interactions/HoverShiftButton";
+import ProjectsList from "./Components/Project/ProjectsList";
+import HeroSection from './Components/Hero/HeroSection';
 
 export default function Home() {
-
   return (
-    <div>
-      <h1>
-        Aman's Portfolio
-      </h1>
-
-      <HoverShiftButton />
-      <ExpandingCard />
-      <ExpandingCarousel />
-      <RadialRevealCard />
-
-      <InteractiveCardScroll />
-
-      <div>
-        <Link href="/case-study-1">Case Study 1</Link>
-        <Link href="/case-study-2">Case Study 2</Link>
-      </div>
-
-      <div className="flex gap-8 m-8">
-        <Link href="case-study-3">
-          <motion.div
-            layoutId="Third"
-            className="w-50 h-40 cursor-pointer rounded-2xl bg-indigo-500"
-          ></motion.div>
-        </Link>
-
-        <Link href="case-study-2">
-          <motion.div
-            layoutId="Second"
-            className="w-50 h-40 cursor-pointer rounded-2xl bg-red-500"
-          ></motion.div>
-        </Link>
-
-        <Link href="interaction-library">
-          <div className="w-50 h-40 cursor-pointer rounded-2xl bg-green-400"></div>
-        </Link>
-      </div>
+    <div className="flex flex-col gap-8 overflow-y-scroll snap-y snap-mandatory">
+      <HeroSection />
+      <ProjectsList />
     </div>
   );
 }
