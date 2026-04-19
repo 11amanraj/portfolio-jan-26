@@ -19,6 +19,16 @@
   .responsive-padding {
     @apply px-6 sm:px-12 lg:px-16;
   }
+
+  .label-writing-mode {
+    writing-mode: horizontal-tb;
+  }
+
+  @media (min-width: 1536px) {
+    .label-writing-mode {
+      writing-mode: vertical-rl;
+    }
+  }
 }
 
 body {
