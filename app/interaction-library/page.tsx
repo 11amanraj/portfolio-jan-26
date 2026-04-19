@@ -70,15 +70,10 @@ export default function Page() {
             </div>
 
             {/* Right Vertical Label */}
-            <div className="w-full 2xl:w-31 min-w-16 h-20 2xl:h-auto flex items-center justify-end 2xl:items-end 2xl:justify-center py-2 sm:py-12 pr-8 2xl:pr-0 shrink-0">
-
-                <span
-                    className="text-[#535353] font-bold uppercase text-md sm:text-2xl tracking-[2.64px] whitespace-nowrap"
-                    style={{ writingMode: "vertical-rl" }}
-                >
+            <div className="w-full 2xl:w-31 relative flex items-center justify-end 2xl:items-end 2xl:justify-center py-2 sm:py-12 min-w-16 h-20 2xl:h-auto pr-8 2xl:pr-0">
+                <span className="text-[#535353] font-bold uppercase text-md sm:text-2xl tracking-[2.64px] whitespace-nowrap label-writing-mode" >
                     Interaction Library
                 </span>
-
             </div>
         </div>
     );
