@@ -3,7 +3,7 @@ export default function Page() {
         <div className="h-screen w-screen flex flex-col 2xl:flex-row">
             <div className="w-26 shrink-10 hidden 2xl:block"></div>
 
-            <div className="flex-1 shrink 2xl:min-w-368 bg-black relative font-heading flex gap-12 flex-col py-12 pl-8 pr-8 2xl:pl-16 2xl:pr-0">
+            <div className="flex-1 shrink 2xl:min-w-368 relative font-heading flex gap-12 flex-col py-12 pl-8 pr-8 2xl:pl-16 2xl:pr-0">
                 <div
                     className="text-white font-extralight text-[160px] leading-none select-none pointer-events-none"
                 >
