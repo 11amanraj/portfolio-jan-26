@@ -5,7 +5,7 @@ export default function Page() {
 
             <div className="flex-1 shrink 2xl:min-w-368 relative font-heading flex gap-12 flex-col pt-12 pb-0 2xl:pb-12 pl-8 pr-8 2xl:pl-16 2xl:pr-0">
                 <div
-                    className="text-white font-extralight text-[160px] leading-none select-none pointer-events-none"
+                    className="text-white font-extralight text-[48px] sm:text-[160px] leading-none select-none pointer-events-none"
                 >
                     01
                 </div>
@@ -25,9 +25,9 @@ export default function Page() {
 
             </div>
 
-            <div className="w-full 2xl:w-31 relative flex items-center justify-end 2xl:items-end 2xl:justify-center py-12 min-w-16 h-20 2xl:h-auto pr-8 2xl:pr-0">
+            <div className="w-full 2xl:w-31 relative flex items-center justify-end 2xl:items-end 2xl:justify-center py-2 sm:py-12 min-w-16 h-20 2xl:h-auto pr-8 2xl:pr-0">
                 <span
-                    className="text-[#535353] font-bold uppercase text-2xl tracking-[2.64px] whitespace-nowrap label-writing-mode"
+                    className="text-[#535353] font-bold uppercase text-md sm:text-2xl tracking-[2.64px] whitespace-nowrap label-writing-mode"
                 >
                     Interaction Library
                 </span>
