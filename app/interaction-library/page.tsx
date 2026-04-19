@@ -10,24 +10,16 @@ export default function Page() {
                     01
                 </div>
 
-                <div className="flex-1 flex gap-3">
+                <div className="flex-1 grid gap-3"
+                    style={{ gridTemplateColumns: '14fr 11fr 10fr', gridTemplateRows: '6fr 7fr' }}>
 
-                    <div className="bg-white flex-1 max-w-150 rounded-sm">
-                    </div>
+                    <div className="bg-white rounded-sm row-span-2"></div>
 
-                    <div className="flex-1 flex flex-col gap-3">
-                        <div className="flex-1 flex gap-3">
-                            <div className="bg-white flex-1 rounded-sm">
+                    <div className="bg-white rounded-sm"></div>
 
-                            </div>
+                    <div className="bg-white rounded-sm"></div>
 
-                            <div className="bg-white flex-1 rounded-sm">
-
-                            </div>
-                        </div>
-
-                        <div className="bg-white flex-1 rounded-sm"></div>
-                    </div>
+                    <div className="bg-white rounded-sm col-span-2"></div>
                 </div>
 
             </div>
