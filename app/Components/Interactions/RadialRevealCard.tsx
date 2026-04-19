@@ -208,7 +208,7 @@ const RadialRevealCard = () => {
         : (inCart ? "#ffffff" : "#0d0d0d")
 
     return (
-        <div className="w-screen h-screen bg-red-700 flex items-center justify-center">
+        <div className="w-screen h-screen flex items-center justify-center">
             <div
                 style={{ borderColor: activeBorderColor }}
                 className="relative border-[3px] overflow-hidden w-[300px]"
