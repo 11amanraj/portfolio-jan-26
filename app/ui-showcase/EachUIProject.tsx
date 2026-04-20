@@ -6,6 +6,7 @@ type EachUIProjectProps = {
     projectName: string
     description: string
     typographyLabel: string
+    image: string
     colors: {
         bg: string
         textPrimary: string
@@ -22,6 +23,7 @@ export default function EachUIProject({
     projectName,
     description,
     typographyLabel,
+    image,
     colors,
 }: EachUIProjectProps) {
     return (
@@ -56,7 +58,7 @@ export default function EachUIProject({
                 {/* Mockup image */}
                 <div className="flex-1 relative my-6">
                     <Image
-                        src="/ui-showcase/screen.png"
+                        src={image}
                         alt={`${projectName} app screens`}
                         fill
                         className="object-contain"
@@ -209,7 +211,7 @@ export default function EachUIProject({
                     style={{ padding: 'clamp(16px, calc(16px + (100vw - 1024px) * 0.12500), 128px)' }}>
                     <div className="relative w-full h-full">
                         <Image
-                            src="/ui-showcase/screen.png"
+                            src={image}
                             alt={`${projectName} app screens`}
                             fill
                             className="object-contain"
