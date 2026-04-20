@@ -3,7 +3,6 @@ import { Inter, Poppins, Lora } from "next/font/google"
 import "./globals.css";
 import { LayoutGroup } from "motion/react";
 import NavBar from "./Components/Navigation/NavBar";
-import Footer from "./Components/Footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
