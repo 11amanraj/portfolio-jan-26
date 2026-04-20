@@ -20,10 +20,10 @@ const CarouselCard = ({ item }: { item: CardItem }) => (
                 muted
                 loop
                 playsInline
-                className='w-full h-full object-content'
+                className='w-full h-full object-contain'
             />
         ) : (
-            <img src={item.src} alt={item.alt} className='w-full h-full object-content' />
+            <img src={item.src} alt={item.alt} className='w-full h-full object-contain' />
         )}
     </div>
 )
