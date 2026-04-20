@@ -50,7 +50,6 @@ export default function RootLayout({
         <LayoutGroup>
           {children}
         </LayoutGroup>
-        {/* <Footer /> */}
       </body>
     </html>
   );
