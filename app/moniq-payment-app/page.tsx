@@ -4,38 +4,27 @@ import Compare from "@mui/icons-material/Compare"
 import Star from "@mui/icons-material/Star"
 import History from "@mui/icons-material/History"
 import NorthEast from "@mui/icons-material/NorthEast"
-import ArrowForward from "@mui/icons-material/ArrowForward"
-import NorthEastOutlined from "@mui/icons-material/NorthEastOutlined"
 
 export default function AndroidPrivateSpace() {
     return (
         <div className="bg-[#080808] text-[#f0f0f0] relative overflow-x-hidden">
-            {/* Subtle background texture */}
-            <div className="absolute inset-x-0 top-136 h-270 overflow-hidden pointer-events-none select-none">
-                <div className="w-full h-[118.49%] absolute top-[-9.24%] bg-[#111111]" />
-                <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#080808]" />
-            </div>
 
             <div className="relative">
                 {/* ── 1. HERO ── */}
                 <div className="max-w-350 mx-auto px-6 md:px-12">
-                    <div className="flex flex-col lg:flex-row lg:items-end gap-10 pt-20 pb-10 min-h-120 justify-end">
-                        <div className="flex-1 flex flex-col gap-4">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-sm w-fit">
-                                <div className="w-1.25 h-1.25 rounded-full bg-[#3cda64]" />
-                                <span className="text-[11.8px] text-[#f0f0f0] uppercase tracking-wider">SHIPPED</span>
-                            </div>
-                            <h1 className="text-[48px] md:text-[61.6px] leading-none tracking-[-1.28px]">
-                                Android<br />Private space
-                            </h1>
-                        </div>
-                        <div className="flex-1">
+                    <div className="flex flex-col lg:flex-row lg:items-end gap-10 pt-20 pb-10 min-h-120 justify-between">
+                        <h1 className="text-[48px] md:text-[61.6px] leading-none tracking-[-1.28px]">
+                            Android<br />Private space
+                        </h1>
+                        <div className="flex-1 max-w-158">
                             <p className="text-[#8a8a8a] text-[22px] md:text-[30.8px] leading-[1.35]">
                                 Protecting millions&apos; sensitive apps and data from prying eyes
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <div className="bg-amber-300 h-224" />
 
                 {/* ── 2. PROJECT DESCRIPTION ── */}
                 <div className="max-w-350 mx-auto px-6 md:px-12 py-12 md:py-16">
@@ -65,7 +54,7 @@ export default function AndroidPrivateSpace() {
                 </div>
 
                 {/* ── 3. QUOTE / PHOTO ── */}
-                <div className="w-full overflow-hidden relative h-120 md:h-160">
+                <div className="max-w-350 mx-auto overflow-hidden relative h-120 md:h-160">
                     <div className="absolute w-full h-[135.87%] top-[-17.93%] bg-[#1a1a1a]" />
                     <div className="absolute inset-0 flex items-center justify-center px-6">
                         <h2 className="text-white text-[32px] md:text-[64px] text-center leading-none tracking-[-1.28px] max-w-265">
@@ -326,44 +315,6 @@ export default function AndroidPrivateSpace() {
                             </div>
                             <div className="w-full h-50 md:h-91.75 bg-[#1e1e1e]" />
                         </div>
-                    </div>
-                </div>
-
-                {/* ── 14. BOTTOM CARDS ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 pb-0 flex flex-col md:flex-row gap-2.5">
-                    <div className="bg-[#131313] flex-1 p-5 flex flex-col gap-4">
-                        <h2 className="text-[#f0f0f0] text-[32px] md:text-[48px] tracking-[-0.96px] leading-[1.2]">
-                            Request a case study
-                        </h2>
-                        <div className="flex flex-col gap-16 flex-1 pt-4">
-                            <p className="text-[#8a8a8a] text-[18px] md:text-[22px] tracking-[-0.22px] leading-[1.4]">
-                                Want to learn more about this project? Get in touch to request a case study.
-                            </p>
-                            <a href="mailto:25amrj@gmail.com" className="inline-flex items-center gap-2 text-[#f0f0f0] text-[14px] uppercase w-fit">
-                                <span className="border-b border-[#f0f0f0] pb-0.5">GET IN TOUCH</span>
-                                <ArrowForward sx={{ color: "#3cda64", fontSize: 16 }} />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="bg-[#131313] flex-1 p-2.5 flex flex-col gap-2.5">
-                        <div className="pl-2.5 pt-5">
-                            <h2 className="text-[#f0f0f0] text-[32px] md:text-[47.1px] tracking-[-0.96px] leading-[1.2]">
-                                Next project
-                            </h2>
-                        </div>
-                        <a href="#" className="flex flex-col gap-3 flex-1 p-2.5">
-                            <div className="flex-1 relative overflow-hidden min-h-75 md:min-h-125">
-                                <div className="absolute inset-0 bg-[#222222]" />
-                                <div className="absolute top-3 left-3 inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-sm">
-                                    <div className="w-1.25 h-1.25 rounded-full bg-[#3cda64]" />
-                                    <span className="text-[11.8px] text-white uppercase">SHIPPED</span>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="text-[#f0f0f0] text-[14.6px] tracking-[0.32px]">Platform McKinsey</p>
-                                <p className="text-[#8a8a8a] text-[14.5px] tracking-[0.32px]">Streamlining FinalDocs Submission</p>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
