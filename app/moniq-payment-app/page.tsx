@@ -1,360 +1,382 @@
-import { ReactNode } from "react"
-import NotificationsOff from "@mui/icons-material/NotificationsOff"
-import Compare from "@mui/icons-material/Compare"
-import Star from "@mui/icons-material/Star"
+import Link from "next/link"
+import type { ReactNode } from "react"
+import ArrowBack from "@mui/icons-material/ArrowBack"
+import AccountBalanceWallet from "@mui/icons-material/AccountBalanceWallet"
+import CompareArrows from "@mui/icons-material/CompareArrows"
 import History from "@mui/icons-material/History"
-import NorthEast from "@mui/icons-material/NorthEast"
+import Insights from "@mui/icons-material/Insights"
+import NotificationsOff from "@mui/icons-material/NotificationsOff"
+import Star from "@mui/icons-material/Star"
 
-export default function AndroidPrivateSpace() {
+const heroTexture =
+    "https://www.figma.com/api/mcp/asset/fe71bb52-6c7d-4676-9afd-a9c774bebe79"
+const heroBanner =
+    "https://www.figma.com/api/mcp/asset/54670683-9428-4258-acd8-79365aa431ca"
+const problemImage =
+    "https://www.figma.com/api/mcp/asset/fac2e54b-4ec4-4ca2-8ecf-f6ac52341576"
+
+const meta = [
+    { label: "Interface Scope", value: ["Mobile"] },
+    {
+        label: "Key Features",
+        value: ["Expense Insights", "Bill Splitting", "Merchant Analysis", "Budget Analysis"],
+    },
+    {
+        label: "Tools & Techniques Used",
+        value: ["Figma", "User Surveys", "Interviews", "Wireframing"],
+    },
+    { label: "Project Type", value: ["Academic Concept Project"] },
+]
+
+const painPoints = [
+    {
+        title: "Transaction overload",
+        body: "72% of users reported losing track of frequent micro-payments, with many relying on bank balance alone to estimate spending.",
+    },
+    {
+        title: "Shared expense friction",
+        body: "Users often found group payments awkward to calculate, follow up on, and separate from their own personal spending.",
+    },
+    {
+        title: "Poor spending context",
+        body: "Payment histories showed where money moved, but rarely explained why it moved, what category it belonged to, or how it affected budgets.",
+    },
+]
+
+const solutionFeatures = [
+    {
+        icon: <Insights sx={{ fontSize: 20 }} />,
+        label: "Daily payments are automatically grouped into clear spending categories",
+    },
+    {
+        icon: <NotificationsOff sx={{ fontSize: 20 }} />,
+        label: "Monthly budgets are tracked with actionable insights, not just passive statistics",
+    },
+    {
+        icon: <CompareArrows sx={{ fontSize: 20 }} />,
+        label: "Shared expenses can be split instantly with friends, groups, or custom participants",
+    },
+    {
+        icon: <Star sx={{ fontSize: 20 }} />,
+        label: "Receipts, notes, and transaction context are stored for future clarity",
+    },
+    {
+        icon: <History sx={{ fontSize: 20 }} />,
+        label: "Pending repayments are organized and reminders can be sent without awkward follow-ups",
+    },
+    {
+        icon: <AccountBalanceWallet sx={{ fontSize: 20 }} />,
+        label: "Cash, digital payments, and personal exclusions are all accounted for in one system",
+    },
+]
+
+const principles = [
+    {
+        title: "UPI-powered expense tracking, redefined",
+        paragraphs: [
+            <>
+                Traditional expense tracking often relies on <Strong>manual entry</Strong>, requiring
+                users to <Strong>log, categorize, and reconstruct spending</Strong> after payments are
+                made. To reduce this hassle, the system was built around an existing habit users
+                already follow daily: <Strong>UPI payments</Strong>.
+            </>,
+            <>
+                Instead of creating a separate tracking process,{" "}
+                <Strong>transaction details like amount, merchant, and payment history</Strong> are
+                used as the <Strong>foundation for expense organization</Strong>. Expense tracking
+                becomes a seamless extension of payment itself, reducing effort while improving
+                financial clarity.
+            </>,
+        ],
+        quote: "Built on top of familiar UPI behavior, this system converts payment history into meaningful financial control without added friction.",
+    },
+    {
+        title: "Flexible social splitting and expense organization",
+        paragraphs: [
+            <>
+                <Strong>Shared expenses often become confusing</Strong> when personal spending,
+                repayments, and group coordination are treated the same. Bill splitting was designed
+                to function alongside <Strong>Friend Circles</Strong>, allowing transactions to be
+                split instantly while keeping coordination flexible.
+            </>,
+            <>
+                People can be <Strong>added or removed for a specific expense</Strong> without
+                changing the original group. After splitting, <Strong>only the user&apos;s share</Strong>{" "}
+                is included in budget calculations while repayments are treated separately.
+            </>,
+        ],
+        quote: "Designed beyond basic bill splitting, this system transforms shared expenses into structured, trackable financial relationships.",
+    },
+    {
+        title: "Smart budgeting with behavioral awareness",
+        paragraphs: [
+            <>
+                Traditional finance apps are often <Strong>limited to tracking expenses</Strong>, but
+                budgeting becomes more effective when financial behavior is understood alongside it.
+                Moniq connects <Strong>monthly goals, category insights, unusual expenses, and
+                    transaction trends</Strong>.
+            </>,
+            <>
+                By combining budgeting with behavioral awareness, the patterns behind spending can
+                be recognized, allowing financial decisions to be shaped by real habits rather than
+                passive numbers alone.
+            </>,
+        ],
+        quote: "Where budgeting meets behavioral insight, turning transactions into patterns and patterns into smarter money decisions.",
+    },
+]
+
+export default function Page() {
     return (
-        <div className="bg-[#080808] text-[#f0f0f0] relative overflow-x-hidden">
+        <main className="min-h-screen overflow-x-hidden bg-[#080808] text-[#f0f0f0]">
+            {/* <Link
+                href="/"
+                className="fixed left-4 top-4 z-20 inline-flex h-[51px] items-center gap-2 border border-[#2e2e2e] bg-[#080808]/45 px-5 text-[18px] text-[#dbdbdb] backdrop-blur-md transition-colors hover:border-[#68acef] hover:text-white sm:left-12 sm:top-32"
+            >
+                <ArrowBack sx={{ fontSize: 20 }} />
+                Back
+            </Link> */}
 
-            <div className="relative">
-                {/* ── 1. HERO ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12">
-                    <div className="flex flex-col lg:flex-row lg:items-end gap-10 pt-20 pb-10 min-h-120 justify-between">
-                        <h1 className="text-[48px] md:text-[61.6px] leading-none tracking-[-1.28px]">
-                            Android<br />Private space
-                        </h1>
-                        <div className="flex-1 max-w-158">
-                            <p className="text-[#8a8a8a] text-[22px] md:text-[30.8px] leading-[1.35]">
-                                Protecting millions&apos; sensitive apps and data from prying eyes
+            <section className="mx-auto flex w-full max-w-[1400px] flex-col gap-10 px-6 pb-10 pt-32 sm:px-12 lg:flex-row lg:items-end lg:pt-52">
+                <div className="flex-1">
+                    <p className="text-[48px] font-medium leading-none tracking-[-1.28px] text-[#68acef] md:text-[64px]">
+                        Moniq
+                    </p>
+                    <h1 className="mt-2 text-[34px] font-medium leading-[1.1] tracking-[-1.28px] text-[#8a8a8a] md:text-[48px]">
+                        Spend Smart. Live Clear.
+                    </h1>
+                </div>
+                <p className="max-w-[649px] text-[18px] leading-[1.5] text-[#8a8a8a] md:text-[24px]">
+                    Helping users track spending, split expenses, and build better financial habits
+                    through everyday UPI payments.
+                </p>
+            </section>
+
+            <section className="relative h-[430px] overflow-hidden bg-[#080808] md:h-[925px]">
+                <img
+                    src={heroTexture}
+                    alt=""
+                    className="absolute inset-x-0 top-[-9%] h-[118%] w-full object-cover"
+                />
+                <img
+                    src={heroBanner}
+                    alt="Moniq payment app shown on a phone beside a notebook and pen"
+                    className="absolute inset-x-0 top-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#080808]" />
+            </section>
+
+            <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-24 px-6 py-16 sm:px-12 lg:py-24">
+                <section className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
+                    <p className="max-w-[506px] text-[24px] leading-[1.18] text-[#f0f0f0] md:text-[32px]">
+                        Moniq has been designed as a concept payment experience that{" "}
+                        <span className="font-medium text-[#68acef]">
+                            seamlessly integrates expense tracking, smart insights, and bill splitting
+                            into UPI apps
+                        </span>{" "}
+                        to encourage better spending management, financial awareness, and stronger
+                        everyday financial habits.
+                    </p>
+                    <div className="grid gap-0">
+                        {meta.map((item) => (
+                            <MetaRow key={item.label} label={item.label} value={item.value} />
+                        ))}
+                    </div>
+                </section>
+
+                <img
+                    src={problemImage}
+                    alt="Street payment scene with the question: 60 crore payments a day, but where does it all go?"
+                    className="h-auto w-full object-cover"
+                />
+
+                <SplitSection
+                    title="Problem"
+                    mutedTitle="Solving the 'Mindless Spending' Gap"
+                    body={
+                        <>
+                            <p>
+                                Many users make frequent UPI payments every day but lack clear
+                                visibility into where their money goes, how small expenses accumulate,
+                                or how shared costs impact their finances. While payment apps simplify
+                                transactions, they often stop short of enabling deeper spending
+                                awareness, budgeting discipline, and proactive financial decision-making.
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="bg-amber-300 h-224" />
-
-                {/* ── 2. PROJECT DESCRIPTION ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 py-12 md:py-16">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div className="flex flex-col gap-10">
-                            <p className="text-[#f0f0f0] text-[20px] md:text-[27.3px] leading-[1.33]">
-                                I led the design of Android Private space – a new privacy protection feature on Android
-                                launched at <span className="text-[#3cda64]">Google I/O</span>. Android Private space gives
-                                users a separate compartment on their devices for installing apps they wish to keep to themselves.
+                            <p className="text-[24px] leading-[1.3] text-[#f0f0f0] md:text-[32px]">
+                                Recognising this gap, an opportunity was identified to{" "}
+                                <span className="font-medium text-[#68acef]">
+                                    challenge the extra effort required to stay financially aware
+                                </span>{" "}
+                                in a digital-first payment ecosystem.
                             </p>
-                            <a href="#" className="inline-flex items-center gap-2 text-[#f0f0f0] text-[14px] uppercase w-fit">
-                                <span className="border-b border-[#f0f0f0] pb-0.5">GOOGLE BLOG</span>
-                                <NorthEast sx={{ color: "#3cda64", fontSize: 16 }} />
-                            </a>
-                        </div>
-                        <div className="flex flex-col divide-y divide-[#616161]">
-                            <MetaRow label="Product" value="Android" />
-                            <MetaRow
-                                label="Skills"
-                                value={["Product design", "Stakeholder management", "Interactive prototyping", "User research & testing"]}
-                            />
-                            <MetaRow label="My role" value="Design lead" />
-                            <MetaRow label="Timeline" value="Q2 2023 - Q2 2024" />
-                            <MetaRow label="Team" value="Deepak Mallya, Misa Gareau Rachel Burrows" />
-                        </div>
-                    </div>
-                </div>
+                        </>
+                    }
+                />
 
-                {/* ── 3. QUOTE / PHOTO ── */}
-                <div className="max-w-350 mx-auto overflow-hidden relative h-120 md:h-160">
-                    <div className="absolute w-full h-[135.87%] top-[-17.93%] bg-[#1a1a1a]" />
-                    <div className="absolute inset-0 flex items-center justify-center px-6">
-                        <h2 className="text-white text-[32px] md:text-[64px] text-center leading-none tracking-[-1.28px] max-w-265">
-                            Handing someone your phone feel like handing over your whole diary…
-                        </h2>
-                    </div>
-                </div>
-
-                {/* ── 4. PROBLEM ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 pt-10 pb-32 md:pb-48">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
+                <section className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
+                    <h2 className="text-[34px] leading-[1.2] tracking-[-0.96px] md:text-[48px]">
+                        Research
+                    </h2>
+                    <div className="flex flex-col gap-8">
+                        <p className="text-[15px] leading-[1.4] tracking-[0.15px] text-[#8a8a8a]">
+                            Tracking how people spend money sounds simple until you ask them to
+                            explain it. Frequent digital payments, fragmented transaction histories,
+                            and informal social splits make financial behavior surprisingly difficult
+                            to monitor.
+                            <br />
+                            <br />
+                            To better understand these patterns, we{" "}
+                            <span className="text-white">
+                                surveyed and interviewed over 42 participants across students and
+                                young professionals
+                            </span>{" "}
+                            to uncover how users manage, track, and split expenses in daily life.
+                        </p>
                         <div>
-                            <h2 className="text-[#f0f0f0] text-[28px] md:text-[48px] leading-[1.2] tracking-[-0.96px]">
-                                Problem<br />
-                                <span className="text-[#8a8a8a]">Stopping the &apos;Hand-off Anxiety&apos;</span>
-                            </h2>
-                        </div>
-                        <div className="flex flex-col gap-16">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                Approximately one out of four users (28%) has unintentionally revealed information they wished
-                                to keep private while lending their phones to friends and family. While solutions exist on the
-                                market, they often fall short in fully concealing app presence, leaving potential leakage points.
+                            <p className="mb-3 text-[16px] leading-[1.3] tracking-[0.32px] text-[#68acef]">
+                                Common Painpoints
                             </p>
-                            <p className="text-[#f0f0f0] text-[18px] md:text-[32px] leading-[1.3]">
-                                Recognising this gap, we saw this as a massive opportunity to help users{" "}
-                                <span className="text-[#3cda64]">
-                                    regain control of what their phone says about them.
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 5. RESEARCH ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 pb-32 md:pb-48">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h2 className="text-[#f0f0f0] text-[28px] md:text-[48px] leading-[1.2] tracking-[-0.96px]">
-                                Research
-                            </h2>
-                        </div>
-                        <div className="flex flex-col gap-8">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                Getting individuals to discuss personal matters on their phones proved to be quite challenging.
-                                Who would&apos;ve thought, right? In the early stages of the project, we{" "}
-                                <span className="text-[#f0f0f0]">interviewed and surveyed over 900 participants</span>{" "}
-                                to understand their use-cases and struggles.
-                            </p>
-                            <div className="flex flex-col gap-2.5">
-                                <p className="text-[#3cda64] text-[16px] tracking-[0.32px]">Common painpoints</p>
-                                <div className="flex flex-col border-t border-[#616161]">
-                                    <PainPoint
-                                        label="Not feeling in-control while sharing"
-                                        detail="50% of leakages happen through unanticipated app notifications while sharing the phone."
-                                    />
-                                    <PainPoint
-                                        label="Password sharing is common"
-                                        detail="Borrower sometimes knows their screen PIN, especially with users' closest friends/family – where consequence of revealing is generally high."
-                                    />
-                                    <PainPoint
-                                        label="Ad-hoc device sharing"
-                                        detail="<50% of participants reported that borrowers never ask for their permission to borrow their phones, giving users virtually no time to prepare."
-                                    />
-                                </div>
+                            <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-1">
+                                {painPoints.map((item) => (
+                                    <PainPoint key={item.title} {...item} />
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                {/* ── 6. SOLUTION ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 pb-16">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h2 className="text-[#f0f0f0] text-[28px] md:text-[48px] leading-[1.2] tracking-[-0.96px]">
-                                Solution<br />
-                                <span className="text-[#8a8a8a]">Not your average app locker</span>
-                            </h2>
-                        </div>
-                        <div className="flex flex-col gap-8">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                Android Private Space gives users a separate compartment on their devices for installing apps
-                                they wish to keep to themselves so they can feel more in-control and comfortable sharing their
-                                phone with others.
+                <section className="h-[360px] bg-[#131313] md:h-[706px]" />
+
+                <SplitSection
+                    title="Solution"
+                    mutedTitle="Designed beyond simple tracking"
+                    body={
+                        <>
+                            <p>
+                                Moniq brings expense tracking into the payment flow itself, helping
+                                users understand daily spending while keeping transactions familiar,
+                                quick, and socially useful.
                             </p>
-                            <div className="flex flex-col">
-                                <p className="text-[#8a8a8a] text-[14px] pb-1.5 border-b border-[#616161]">
-                                    When private space is locked:
+                            <div>
+                                <p className="border-b border-[#616161] pb-2 text-[14px] text-[#8a8a8a]">
+                                    Core system behaviors
                                 </p>
-                                <FeatureItem icon={<NotificationsOff sx={{ fontSize: 20 }} />} label="Private notifications are hidden" />
-                                <FeatureItem icon={<Compare sx={{ fontSize: 20 }} />} label="Private files and photos are hidden" />
-                                <FeatureItem icon={<Star sx={{ fontSize: 20 }} />} label="Private app suggestions are removed" />
-                                <FeatureItem
-                                    icon={<History sx={{ fontSize: 20 }} />}
-                                    label="Separate Google account used to protect download history etc"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 7. PHOTO SHOWCASE ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 py-8">
-                    <div className="bg-[#131313] h-100 md:h-169 overflow-hidden relative">
-                        {/* hand image placeholder */}
-                        <div className="absolute right-0 bottom-0 h-[80%] md:h-157.75 w-[45%] md:w-156 bg-[#1e1e1e]" />
-                        {/* phone mockup */}
-                        <div className="absolute top-7.5 md:top-15 left-1/2 -translate-x-1/2 h-67.5 md:h-134.75 w-32.5 md:w-64.25">
-                            <div className="absolute inset-0 bg-[#222222]" />
-                            <div className="absolute inset-1.25 md:inset-2.5 rounded-2.5 md:rounded-4.75 overflow-hidden">
-                                <div className="absolute inset-0 bg-[#2e2e2e]" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 8. HIDING DIGITAL FOOTPRINTS ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 py-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h3 className="text-[#f0f0f0] text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.22px]">
-                                Hiding digital footprints.
-                            </h3>
-                        </div>
-                        <div className="flex flex-col gap-8">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                From the beginning, we insisted on users being able to use and access their private apps
-                                seamlessly when they need it, and hide them entirely swiftly. Turns out to thoroughly{" "}
-                                <span className="text-[#f0f0f0]">hide the entire footprint</span> of an app from one&apos;s
-                                device is quite complex than we anticipated, as it spans across many system surfaces such as settings.
-                            </p>
-                            <p className="text-[#f0f0f0] text-[18px] md:text-[32px] leading-[1.3]">
-                                We paid meticulous attention to the footprint of apps across the whole operating system to
-                                minimise leakage from apps in private space – Going beyond just concealing app icons.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 9. DEVICE SHOWCASE ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 py-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        {/* Phone — hidden state */}
-                        <div className="bg-[#131313] h-75 md:h-87 overflow-hidden relative">
-                            <div className="absolute bottom-0 left-1/2 -translate-x-[30%] w-60 md:w-83.5 h-140 md:h-175">
-                                <div className="absolute inset-0 bg-[#222222]" />
-                                <div className="absolute inset-2.25 md:inset-3.25 rounded-3.5 md:rounded-4.75 overflow-hidden">
-                                    <div className="w-full h-full bg-[#2e2e2e]" />
+                                <div className="flex flex-col">
+                                    {solutionFeatures.map((item) => (
+                                        <FeatureItem key={item.label} {...item} />
+                                    ))}
                                 </div>
                             </div>
-                        </div>
-                        {/* Pixel Fold — unlocked */}
-                        <div className="bg-[#131313] h-75 md:h-87 overflow-hidden relative">
-                            <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-                                <div className="relative w-120 md:w-166.25 h-120 md:h-162 -top-10">
-                                    <div className="absolute inset-0 bg-[#222222]" />
-                                    <div className="absolute top-[4%] left-[3%] w-[93%] h-[80%] bg-[#2e2e2e]" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </>
+                    }
+                />
 
-                {/* ── 10. LOCK SECTION ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 py-12 pb-24">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h3 className="text-[#f0f0f0] text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.22px]">
-                                Lock Private space inconspicuously.
-                            </h3>
-                        </div>
-                        <div className="flex flex-col gap-10">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                In order to not draw suspicion from others, locking private space is natural and discrete.
-                                With just a press of the device&apos;s power button, users can quickly lock their private space,
-                                reducing the time required for preparation before lending their devices to others.
-                            </p>
-                            <div className="bg-[#1e1e1e] h-100 md:h-150" />
-                        </div>
-                    </div>
-                </div>
+                {principles.map((principle) => (
+                    <PrincipleSection key={principle.title} {...principle} />
+                ))}
+            </div>
+        </main>
+    )
+}
 
-                {/* ── 11. HIDING ON PHONE ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 pb-24">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h3 className="text-[#f0f0f0] text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.22px]">
-                                Hiding Private space on your phone.
-                            </h3>
-                        </div>
-                        <div className="flex flex-col gap-10">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                &apos;Hang on… Isn&apos;t it kinda obvious to have a &apos;Private&apos; section on your phone?&apos;
-                                For those seeking a more heightened level of privacy, they have the option to hide their private
-                                spaces automatically when they are not using it.
-                            </p>
-                            <div className="flex flex-col gap-6">
-                                {/* Phone mockup placeholder */}
-                                <div className="relative w-32.5 md:w-49 h-67.5 md:h-102.75">
-                                    <div className="absolute inset-0 bg-[#222222]" />
-                                    <div className="absolute inset-1.25 md:inset-2.5 rounded-2.5 md:rounded-4.75 overflow-hidden bg-[#2e2e2e]" />
-                                </div>
-                                <p className="text-[#8a8a8a] text-[15px] md:text-[16px] tracking-[0.32px] leading-[1.3] max-w-135">
-                                    Private space hides when it locks. Users can access it by searching for it in the search bar
-                                </p>
-                                {/* Toggle UI */}
-                                <div className="flex items-center justify-between pl-6 md:pl-8 pr-4 py-3 md:py-4 rounded-full border border-[#616161] bg-[#131313] max-w-85">
-                                    <span className="text-[#f0f0f0] text-[16px] md:text-[22px] tracking-[-0.22px]">
-                                        Hide private space
-                                    </span>
-                                    <div className="bg-[#3cda64] rounded-full w-15 md:w-17.5 h-9 md:h-11 flex items-center justify-end p-1 border border-[#616161] shrink-0">
-                                        <div className="bg-[#f0f0f0] rounded-full w-6 h-6 md:w-8 md:h-8" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 12. SECURITY ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 pb-24">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h3 className="text-[#f0f0f0] text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.22px]">
-                                An additional layer of security.
-                            </h3>
-                        </div>
-                        <div className="flex flex-col gap-10">
-                            <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                Users have the option to set a different lock from their device lock. This ensures that even if
-                                someone borrowing the phone is aware of the device lock, they still won&apos;t be able to
-                                access private space.
-                            </p>
-                            <div className="w-full h-75 md:h-115 bg-[#1e1e1e]" />
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 13. IMPACT ── */}
-                <div className="max-w-350 mx-auto px-6 md:px-12 py-16 pb-24">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-t border-[#616161] pt-10">
-                        <div>
-                            <h2 className="text-[#f0f0f0] text-[28px] md:text-[48px] leading-[1.2] tracking-[-0.96px]">
-                                Impact<br />
-                                <span className="text-[#8a8a8a]">Trust & safety for millions</span>
-                            </h2>
-                        </div>
-                        <div className="flex flex-col gap-8">
-                            <div className="flex flex-col gap-3">
-                                <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                    Not many things are as surreal as seeing work being unveiled at Google I/O 2024. Private space
-                                    will also be made available to OEMs to adopt, extending our reach to a wider user base. You can
-                                    read about the <span className="text-[#3cda64]">announcement here.</span>
-                                </p>
-                                <p className="text-[#8a8a8a] text-[15px] leading-[1.4] tracking-[0.15px]">
-                                    The feature was also recognised as Android 15&apos;s &apos;
-                                    <span className="text-[#3cda64]">Top 5 features&apos; by MKBHD</span>.
-                                </p>
-                            </div>
-                            <div className="w-full h-50 md:h-91.75 bg-[#1e1e1e]" />
-                        </div>
-                    </div>
-                </div>
+function MetaRow({ label, value }: { label: string; value: string[] }) {
+    return (
+        <div className="border-t border-[#616161] py-2.5 first:border-t-0">
+            <p className="text-[14px] leading-[21px] tracking-[0.15px] text-[#8a8a8a]">{label}</p>
+            <div className="mt-0.5 flex flex-col">
+                {value.map((line) => (
+                    <span
+                        key={line}
+                        className="text-[14px] leading-[21px] tracking-[0.15px] text-[#f0f0f0]"
+                    >
+                        {line}
+                    </span>
+                ))}
             </div>
         </div>
     )
 }
 
-function MetaRow({ label, value }: { label: string; value: string | string[] }) {
+function SplitSection({
+    title,
+    mutedTitle,
+    body,
+}: {
+    title: string
+    mutedTitle: string
+    body: ReactNode
+}) {
     return (
-        <div className="flex flex-col gap-0.5 pt-2.5 pb-2.5">
-            <span className="text-[#8a8a8a] text-[13.5px] tracking-[0.15px]">{label}</span>
-            {Array.isArray(value) ? (
-                <div className="flex flex-col">
-                    {value.map((line, i) => (
-                        <span key={i} className="text-[#f0f0f0] text-[13.5px] tracking-[0.15px] leading-5.25">
-                            {line}
-                        </span>
-                    ))}
-                </div>
-            ) : (
-                <span className="text-[#f0f0f0] text-[13.5px] tracking-[0.15px] leading-5.25">{value}</span>
-            )}
-        </div>
+        <section className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
+            <h2 className="text-[34px] leading-[1.2] tracking-[-0.96px] text-[#f0f0f0] md:text-[48px]">
+                {title}
+                <br />
+                <span className="text-[#8a8a8a]">{mutedTitle}</span>
+            </h2>
+            <div className="flex flex-col gap-14 text-[16px] leading-[21px] tracking-[0.15px] text-[#8a8a8a]">
+                {body}
+            </div>
+        </section>
     )
 }
 
-function PainPoint({ label, detail }: { label: string; detail: string }) {
+function PainPoint({ title, body }: { title: string; body: string }) {
     return (
-        <div className="flex flex-col gap-2.5 py-2.5 border-b border-[#616161]">
-            <span className="text-[#8a8a8a] text-[15px] tracking-[0.15px]">{label}</span>
-            <span className="text-[#f0f0f0] text-[15px] leading-[1.4] tracking-[0.15px]">{detail}</span>
-        </div>
+        <article className="border-t border-[#616161] py-2.5">
+            <h3 className="text-[15px] leading-[21px] tracking-[0.15px] text-[#8a8a8a]">{title}</h3>
+            <p className="mt-2.5 text-[15px] leading-[21px] tracking-[0.15px] text-[#f0f0f0]">
+                {body}
+            </p>
+        </article>
     )
 }
 
 function FeatureItem({ icon, label }: { icon: ReactNode; label: string }) {
     return (
-        <div className="flex items-center gap-2.5 py-2 border-b border-[#616161]">
-            <span className="text-[#f0f0f0] shrink-0">{icon}</span>
-            <span className="text-[#f0f0f0] text-[15px] tracking-[0.15px]">{label}</span>
+        <div className="flex items-center gap-2.5 border-b border-[#616161] py-2 text-[#f0f0f0]">
+            <span className="shrink-0">{icon}</span>
+            <span className="text-[15px] leading-[21px] tracking-[0.15px]">{label}</span>
         </div>
     )
+}
+
+function PrincipleSection({
+    title,
+    paragraphs,
+    quote,
+}: {
+    title: string
+    paragraphs: ReactNode[]
+    quote: string
+}) {
+    return (
+        <section className="flex flex-col gap-10">
+            <div className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
+                <h2 className="max-w-[282px] text-[22px] leading-[1.4] tracking-[-0.22px] text-[#f0f0f0]">
+                    {title}
+                </h2>
+                <div className="flex flex-col gap-8">
+                    {paragraphs.map((paragraph, index) => (
+                        <p
+                            key={index}
+                            className="text-[15px] leading-[21px] tracking-[0.15px] text-[#8a8a8a]"
+                        >
+                            {paragraph}
+                        </p>
+                    ))}
+                    <p className="text-[24px] leading-[1.3] text-[#f0f0f0] md:text-[32px]">
+                        {quote}
+                    </p>
+                </div>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+                <div className="h-[260px] bg-[#131313] md:h-[348px]" />
+                <div className="h-[260px] bg-[#131313] md:h-[348px]" />
+            </div>
+        </section>
+    )
+}
+
+function Strong({ children }: { children: ReactNode }) {
+    return <span className="text-white">{children}</span>
 }
