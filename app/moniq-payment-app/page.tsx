@@ -1,6 +1,4 @@
-import Link from "next/link"
 import type { ReactNode } from "react"
-import ArrowBack from "@mui/icons-material/ArrowBack"
 import AccountBalanceWallet from "@mui/icons-material/AccountBalanceWallet"
 import CompareArrows from "@mui/icons-material/CompareArrows"
 import History from "@mui/icons-material/History"
@@ -8,8 +6,6 @@ import Insights from "@mui/icons-material/Insights"
 import NotificationsOff from "@mui/icons-material/NotificationsOff"
 import Star from "@mui/icons-material/Star"
 
-const heroTexture =
-    "https://www.figma.com/api/mcp/asset/fe71bb52-6c7d-4676-9afd-a9c774bebe79"
 const heroBanner =
     "https://www.figma.com/api/mcp/asset/54670683-9428-4258-acd8-79365aa431ca"
 const problemImage =
@@ -145,11 +141,6 @@ export default function Page() {
             </section>
 
             <section className="relative h-108 overflow-hidden bg-[#080808] md:h-231">
-                <img
-                    src={heroTexture}
-                    alt=""
-                    className="absolute inset-x-0 top-[-9%] h-[118%] w-full object-cover"
-                />
                 <img
                     src={heroBanner}
                     alt="Moniq payment app shown on a phone beside a notebook and pen"
