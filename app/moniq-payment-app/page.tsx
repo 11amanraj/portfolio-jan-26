@@ -7,9 +7,9 @@ import NotificationsOff from "@mui/icons-material/NotificationsOff"
 import Star from "@mui/icons-material/Star"
 
 const heroBanner =
-    "https://www.figma.com/api/mcp/asset/54670683-9428-4258-acd8-79365aa431ca"
+    "/case-studies/moniq/banner.jpg"
 const problemImage =
-    "https://www.figma.com/api/mcp/asset/fac2e54b-4ec4-4ca2-8ecf-f6ac52341576"
+    "/case-studies/moniq/problem.jpg"
 
 const meta = [
     { label: "Interface Scope", value: ["Mobile"] },

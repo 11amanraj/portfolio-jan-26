@@ -7,7 +7,7 @@ const imgSvgMark = "https://www.figma.com/api/mcp/asset/f745369e-1242-4e9b-b049-
 const imgSvgText = "https://www.figma.com/api/mcp/asset/b8fdc745-f235-4fe7-bcdd-3e4a5ad0986a"
 const imgEmailSvg = "https://www.figma.com/api/mcp/asset/acdcb86b-dcc6-475d-a23c-7996775dcd3f"
 
-const imgProject1 = "https://www.figma.com/api/mcp/asset/a54d97b5-eeba-4591-8f8e-d40e89296df2"
+const imgProject1 = "/case-studies/moniq/banner.jpg"
 const imgProject2 = "https://www.figma.com/api/mcp/asset/99530160-48ff-49f5-9ab7-2bcd7ffae3ca"
 const imgProject3 = "https://www.figma.com/api/mcp/asset/4b7bd9b1-1345-4302-8ffa-1ab632b27087"
 const imgProject4 = "https://www.figma.com/api/mcp/asset/43ebadb8-3ee4-4b64-8021-09dc7c96d1b2"
@@ -22,7 +22,7 @@ const imgPhoto5 = "https://www.figma.com/api/mcp/asset/fd01f5f3-f83c-43e9-933f-1
 const PHOTOS = [imgPhoto1, imgPhoto2, imgPhoto3, imgPhoto4, imgPhoto5]
 
 const PROJECTS = [
-  { img: imgProject1, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: true },
+  { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
   { img: imgProject2, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
   { img: imgProject3, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
   { img: imgProject4, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
@@ -115,10 +115,7 @@ export default function ExperimentPage() {
         <div className="w-full max-w-[1400px] flex flex-col gap-[41px]">
 
           {/* Section header */}
-          <div className="flex items-center justify-between px-2.5 pb-[32px] border-b border-transparent">
-            <h2 className="text-[#f0f0f0] text-[48px] tracking-[-0.96px] leading-[1.2]">Selected works</h2>
-            <span className="text-[#8a8a8a] text-[43.7px] tracking-[-0.96px] leading-[1.2]">21'–25'</span>
-          </div>
+          <h2 className="text-[#f0f0f0] text-[48px] tracking-[-0.96px] leading-[1.2]">Selected works</h2>
 
           {/* Row 1: full-width */}
           <div className="flex flex-col gap-3">
