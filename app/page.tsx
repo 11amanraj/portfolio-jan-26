@@ -203,8 +203,6 @@ export default function ExperimentPage() {
         </div>
       </section>
 
-      <Footer />
-
       {/* ── CONTACT / FOOTER ──────────────────────────────────────── */}
       {/* <footer className="bg-[#131313] flex flex-col items-center overflow-hidden">
         <div className="w-full max-w-[1400px] px-10 pt-[60px] flex gap-10 items-start">
