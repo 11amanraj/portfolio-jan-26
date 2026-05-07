@@ -129,15 +129,7 @@ const principles = [
 export default function Page() {
     return (
         <main className="min-h-screen overflow-x-hidden bg-[#080808] text-[#f0f0f0]">
-            {/* <Link
-                href="/"
-                className="fixed left-4 top-4 z-20 inline-flex h-[51px] items-center gap-2 border border-[#2e2e2e] bg-[#080808]/45 px-5 text-[18px] text-[#dbdbdb] backdrop-blur-md transition-colors hover:border-[#68acef] hover:text-white sm:left-12 sm:top-32"
-            >
-                <ArrowBack sx={{ fontSize: 20 }} />
-                Back
-            </Link> */}
-
-            <section className="mx-auto flex w-full max-w-[1400px] flex-col gap-10 px-6 pb-10 pt-32 sm:px-12 lg:flex-row lg:items-end lg:pt-52">
+            <section className="mx-auto flex w-full max-w-350 flex-col gap-10 px-6 pb-10 pt-32 sm:px-12 lg:flex-row lg:items-end lg:pt-32">
                 <div className="flex-1">
                     <p className="text-[48px] font-medium leading-none tracking-[-1.28px] text-[#68acef] md:text-[64px]">
                         Moniq
@@ -146,13 +138,13 @@ export default function Page() {
                         Spend Smart. Live Clear.
                     </h1>
                 </div>
-                <p className="max-w-[649px] text-[18px] leading-[1.5] text-[#8a8a8a] md:text-[24px]">
+                <p className="max-w-162 text-[18px] leading-normal text-[#8a8a8a] md:text-[24px]">
                     Helping users track spending, split expenses, and build better financial habits
                     through everyday UPI payments.
                 </p>
             </section>
 
-            <section className="relative h-[430px] overflow-hidden bg-[#080808] md:h-[925px]">
+            <section className="relative h-108 overflow-hidden bg-[#080808] md:h-231">
                 <img
                     src={heroTexture}
                     alt=""
@@ -163,10 +155,10 @@ export default function Page() {
                     alt="Moniq payment app shown on a phone beside a notebook and pen"
                     className="absolute inset-x-0 top-0 h-full w-full object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#080808]" />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-b from-transparent to-[#080808]" />
             </section>
 
-            <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-24 px-6 py-16 sm:px-12 lg:py-24">
+            <div className="mx-auto flex w-full max-w-350 flex-col gap-24 px-6 py-16 sm:px-12 lg:py-24">
                 <section className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
                     <p className="max-w-[506px] text-[24px] leading-[1.18] text-[#f0f0f0] md:text-[32px]">
                         Moniq has been designed as a concept payment experience that{" "}
