@@ -7,10 +7,10 @@ const imgSvgText = "https://www.figma.com/api/mcp/asset/b8fdc745-f235-4fe7-bcdd-
 const imgEmailSvg = "https://www.figma.com/api/mcp/asset/acdcb86b-dcc6-475d-a23c-7996775dcd3f"
 
 const imgProject1 = "/case-studies/moniq/banner.jpg"
-const imgProject2 = "https://www.figma.com/api/mcp/asset/99530160-48ff-49f5-9ab7-2bcd7ffae3ca"
+const imgProject2 = "/case-studies/academic-information-system/banner.jpg"
 const imgProject3 = "/case-studies/elderly-mobile-experience/banner.jpg"
-const imgProject4 = "https://www.figma.com/api/mcp/asset/43ebadb8-3ee4-4b64-8021-09dc7c96d1b2"
-const imgProject5 = "https://www.figma.com/api/mcp/asset/6a80f422-c70c-425a-b432-d6a1b78c0080"
+const imgProject4 = "/ui-showcase.jpg"
+const imgProject5 = "/interaction-library.jpg"
 
 const imgPhoto1 = "https://www.figma.com/api/mcp/asset/7acc1597-2e1d-4e1b-8d51-50fa0189f39b"
 const imgPhoto2 = "https://www.figma.com/api/mcp/asset/decbf172-ea67-4a4f-a8bc-84608f971d5e"
@@ -22,10 +22,10 @@ const PHOTOS = [imgPhoto1, imgPhoto2, imgPhoto3, imgPhoto4, imgPhoto5]
 
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
-  { img: imgProject2, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
+  { img: imgProject2, title: "Academic Information System", desc: "Designing an academic information portal", wide: false, href: "/academic-information-system" },
   { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "/elderly-mobile-experience" },
-  { img: imgProject4, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
-  { img: imgProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false },
+  { img: imgProject4, title: "UI Showcase", desc: "A collection of visual interface explorations", wide: false, href: "/ui-showcase" },
+  { img: imgProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false, href: "/interaction-library" },
 ]
 
 export default function ExperimentPage() {
@@ -154,11 +154,17 @@ export default function ExperimentPage() {
 
           {/* Row 3: two columns */}
           <div className="grid grid-cols-2 gap-[41px]">
-            {PROJECTS.slice(3, 5).map(({ img, title, desc }) => (
+            {PROJECTS.slice(3, 5).map(({ img, title, desc, href }) => (
               <div key={title} className="flex flex-col gap-3">
-                <div className="w-full h-[478px] overflow-hidden bg-white">
-                  <img src={img} alt={title} className="w-full h-full object-cover" />
-                </div>
+                {href ? (
+                  <Link href={href} className="w-full h-[478px] overflow-hidden bg-white block">
+                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  </Link>
+                ) : (
+                  <div className="w-full h-[478px] overflow-hidden bg-white">
+                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  </div>
+                )}
                 <div>
                   <p className="text-[#f0f0f0] text-[17.6px] leading-relaxed">{title}</p>
                   <p className="text-[#8c8b8b] text-[16.2px] leading-relaxed">{desc}</p>
@@ -167,44 +173,6 @@ export default function ExperimentPage() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* ── PHOTO STRIP ───────────────────────────────────────────── */}
-      <section className="h-[561px] overflow-hidden flex items-center">
-        <style>{`
-          @keyframes photo-scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-          }
-          .photo-track {
-            display: flex;
-            flex-direction: row;
-            width: max-content;
-            animation: photo-scroll 30s linear infinite;
-          }
-          .photo-set {
-            display: flex;
-            flex-direction: row;
-            gap: 19px;
-            padding-right: 19px;
-          }
-        `}</style>
-        <div className="photo-track">
-          <div className="photo-set">
-            {PHOTOS.map((src, i) => (
-              <div key={i} className="w-[370px] h-[493px] shrink-0 overflow-hidden">
-                <img src={src} alt="" className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="photo-set">
-            {PHOTOS.map((src, i) => (
-              <div key={i} className="w-[370px] h-[493px] shrink-0 overflow-hidden">
-                <img src={src} alt="" className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
