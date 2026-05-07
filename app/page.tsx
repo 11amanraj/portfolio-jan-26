@@ -1,6 +1,5 @@
 import Link from "next/link"
 import FileDownloadOutlined from "@mui/icons-material/FileDownloadOutlined"
-import Footer from "./Components/Footer/Footer"
 
 const imgHeroBg = "https://www.figma.com/api/mcp/asset/02af6762-cd56-4a13-8c9b-990ff07ab773"
 const imgSvgMark = "https://www.figma.com/api/mcp/asset/f745369e-1242-4e9b-b049-1597fdb4953c"
@@ -9,7 +8,7 @@ const imgEmailSvg = "https://www.figma.com/api/mcp/asset/acdcb86b-dcc6-475d-a23c
 
 const imgProject1 = "/case-studies/moniq/banner.jpg"
 const imgProject2 = "https://www.figma.com/api/mcp/asset/99530160-48ff-49f5-9ab7-2bcd7ffae3ca"
-const imgProject3 = "https://www.figma.com/api/mcp/asset/4b7bd9b1-1345-4302-8ffa-1ab632b27087"
+const imgProject3 = "/case-studies/elderly-mobile-experience/banner.jpg"
 const imgProject4 = "https://www.figma.com/api/mcp/asset/43ebadb8-3ee4-4b64-8021-09dc7c96d1b2"
 const imgProject5 = "https://www.figma.com/api/mcp/asset/6a80f422-c70c-425a-b432-d6a1b78c0080"
 
@@ -24,7 +23,7 @@ const PHOTOS = [imgPhoto1, imgPhoto2, imgPhoto3, imgPhoto4, imgPhoto5]
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
   { img: imgProject2, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
-  { img: imgProject3, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
+  { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "/elderly-mobile-experience" },
   { img: imgProject4, title: "Pixel Satellite SOS", desc: "Building emergency satellite messaging from 0→1 on Android", wide: false },
   { img: imgProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false },
 ]
@@ -134,11 +133,17 @@ export default function ExperimentPage() {
 
           {/* Row 2: two columns */}
           <div className="grid grid-cols-2 gap-[41px]">
-            {PROJECTS.slice(1, 3).map(({ img, title, desc }) => (
+            {PROJECTS.slice(1, 3).map(({ img, title, desc, href }) => (
               <div key={title + img} className="flex flex-col gap-3">
-                <div className="w-full h-[478px] overflow-hidden bg-white">
-                  <img src={img} alt={title} className="w-full h-full object-cover" />
-                </div>
+                {href ? (
+                  <Link href={href} className="w-full h-[478px] overflow-hidden bg-white block">
+                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  </Link>
+                ) : (
+                  <div className="w-full h-[478px] overflow-hidden bg-white">
+                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  </div>
+                )}
                 <div>
                   <p className="text-[#f0f0f0] text-[17.6px] leading-relaxed">{title}</p>
                   <p className="text-[#8c8b8b] text-[16.2px] leading-relaxed">{desc}</p>
