@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
-import FileDownloadOutlined from "@mui/icons-material/FileDownloadOutlined"
 
 const imgHeroBg = "https://www.figma.com/api/mcp/asset/02af6762-cd56-4a13-8c9b-990ff07ab773"
 const imgSvgMark = "https://www.figma.com/api/mcp/asset/f745369e-1242-4e9b-b049-1597fdb4953c"
@@ -12,13 +12,25 @@ const imgProject3 = "/case-studies/elderly-mobile-experience/banner.jpg"
 const imgProject4 = "/ui-showcase.jpg"
 const imgProject5 = "/interaction-library.jpg"
 
-const imgPhoto1 = "https://www.figma.com/api/mcp/asset/7acc1597-2e1d-4e1b-8d51-50fa0189f39b"
-const imgPhoto2 = "https://www.figma.com/api/mcp/asset/decbf172-ea67-4a4f-a8bc-84608f971d5e"
-const imgPhoto3 = "https://www.figma.com/api/mcp/asset/d0c76747-be18-40ff-9e88-082294f9dec5"
-const imgPhoto4 = "https://www.figma.com/api/mcp/asset/34a61116-049f-4ed1-bf42-1ee86e079502"
-const imgPhoto5 = "https://www.figma.com/api/mcp/asset/fd01f5f3-f83c-43e9-933f-1097e64e0c3b"
-
-const PHOTOS = [imgPhoto1, imgPhoto2, imgPhoto3, imgPhoto4, imgPhoto5]
+function FileDownloadIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-4 shrink-0"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
@@ -62,7 +74,7 @@ export default function ExperimentPage() {
             className="flex items-center gap-2 px-4 py-3 border border-[#2e2e2e] backdrop-blur-[7.5px] text-[#f0f0f0] text-[14.9px] leading-6"
           >
             Resume
-            <FileDownloadOutlined sx={{ fontSize: 16, color: '#f0f0f0' }} />
+            <FileDownloadIcon />
           </a>
         </div>
 
