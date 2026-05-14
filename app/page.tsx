@@ -1,9 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 
-const imgHeroBg = "https://www.figma.com/api/mcp/asset/02af6762-cd56-4a13-8c9b-990ff07ab773"
-const imgSvgMark = "https://www.figma.com/api/mcp/asset/f745369e-1242-4e9b-b049-1597fdb4953c"
-const imgSvgText = "https://www.figma.com/api/mcp/asset/b8fdc745-f235-4fe7-bcdd-3e4a5ad0986a"
 const imgProject1 = "/case-studies/moniq/banner.jpg"
 const imgProject2 = "/case-studies/academic-information-system/banner.jpg"
 const imgProject3 = "/case-studies/elderly-mobile-experience/banner.jpg"
@@ -27,10 +24,6 @@ export default function Page() {
 
         {/* Hero graphic with mix-blend-difference */}
         <div className="flex-1 relative flex flex-col items-center justify-end pt-20 pb-10 min-h-[calc(100vh-28px)]">
-          <div className="absolute inset-0 mix-blend-difference pointer-events-none overflow-hidden flex items-stretch">
-            <img src={imgHeroBg} alt="" className="w-full object-cover object-center" />
-          </div>
-
           <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-250 -translate-x-1/2 -translate-y-1/2 px-6 text-center text-8xl font-heading leading-[1.12]">
             I craft products through design and code.
           </div>
