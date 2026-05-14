@@ -45,9 +45,9 @@ export default function Page() {
           </div>
 
           {/* Bio text */}
-          <div className="relative z-10 text-center text-[#f0f0f0] text-[13.4px] leading-[21px] mb-10">
-            <p>Hey – I'm Aman. UX designer & developer currently building the</p>
-            <p>future of digital products. Previously at McKinsey.</p>
+          <div className="relative z-10 text-center max-w-110 text-[#f0f0f0] text-[13.4px] leading-[21px] mb-10">
+            <p>Hey – I’m Aman. Designer & developer creating the next generation of digital experiences with design, strategy, and code.</p>
+            {/* <p>future of digital products. Previously at McKinsey.</p> */}
           </div>
         </div>
 
