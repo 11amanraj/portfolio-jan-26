@@ -4,33 +4,11 @@ import Link from "next/link"
 const imgHeroBg = "https://www.figma.com/api/mcp/asset/02af6762-cd56-4a13-8c9b-990ff07ab773"
 const imgSvgMark = "https://www.figma.com/api/mcp/asset/f745369e-1242-4e9b-b049-1597fdb4953c"
 const imgSvgText = "https://www.figma.com/api/mcp/asset/b8fdc745-f235-4fe7-bcdd-3e4a5ad0986a"
-const imgEmailSvg = "https://www.figma.com/api/mcp/asset/acdcb86b-dcc6-475d-a23c-7996775dcd3f"
-
 const imgProject1 = "/case-studies/moniq/banner.jpg"
 const imgProject2 = "/case-studies/academic-information-system/banner.jpg"
 const imgProject3 = "/case-studies/elderly-mobile-experience/banner.jpg"
 const imgProject4 = "/ui-showcase.jpg"
 const imgProject5 = "/interaction-library.jpg"
-
-function FileDownloadIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="size-4 shrink-0"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
 
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
@@ -46,37 +24,6 @@ export default function ExperimentPage() {
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col">
-
-        {/* Navbar */}
-        <div className="absolute inset-x-0 top-0 z-20 h-20 backdrop-blur-[4px]">
-          <div className="flex items-center justify-between h-full px-12 pr-10">
-            <span className="text-[#f0f0f0] text-[22px] tracking-[-0.22px] leading-none">Aman Raj</span>
-            <div className="flex items-center gap-2.5">
-              <div className="size-12 flex items-center justify-center mix-blend-difference">
-                <img src={imgEmailSvg} alt="" className="size-5 object-contain" />
-              </div>
-              <div className="size-12 flex items-center justify-center rounded-[10px]">
-                <div className="relative size-8">
-                  <div className="absolute top-[7px] left-1 w-6 h-0.5 bg-[#f0f0f0] rounded-[10px]" />
-                  <div className="absolute top-[15px] left-1 w-6 h-0.5 bg-[#f0f0f0] rounded-[10px]" />
-                  <div className="absolute bottom-[7px] left-1 w-6 h-0.5 bg-[#f0f0f0] rounded-[10px]" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Resume pill */}
-        <div className="absolute right-40 top-5 z-30">
-          <a
-            href="/aman_resume.pdf"
-            download
-            className="flex items-center gap-2 px-4 py-3 border border-[#2e2e2e] backdrop-blur-[7.5px] text-[#f0f0f0] text-[14.9px] leading-6"
-          >
-            Resume
-            <FileDownloadIcon />
-          </a>
-        </div>
 
         {/* Hero graphic with mix-blend-difference */}
         <div className="flex-1 relative flex flex-col items-center justify-end pt-20 pb-10 min-h-[calc(100vh-28px)]">
