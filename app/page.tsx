@@ -31,23 +31,13 @@ export default function Page() {
             <img src={imgHeroBg} alt="" className="w-full object-cover object-center" />
           </div>
 
-          {/* SVG logo marks — centered in the hero */}
-          <div
-            className="absolute pointer-events-none"
-            style={{ top: '34%', left: '50%', transform: 'translateX(-50%)', width: 423, height: 213 }}
-          >
-            <div className="absolute left-0 top-1 size-[211px]">
-              <img src={imgSvgMark} alt="" className="w-full h-full object-contain" />
-            </div>
-            <div className="absolute left-[104px] top-1 w-[319px] h-[211px]">
-              <img src={imgSvgText} alt="" className="w-full h-full object-contain" />
-            </div>
+          <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-250 -translate-x-1/2 -translate-y-1/2 px-6 text-center text-8xl font-heading leading-[1.12]">
+            I craft products through design and code.
           </div>
 
           {/* Bio text */}
           <div className="relative z-10 text-center max-w-110 text-[#f0f0f0] text-[13.4px] leading-[21px] mb-10">
             <p>Hey – I’m Aman. Designer & developer creating the next generation of digital experiences with design, strategy, and code.</p>
-            {/* <p>future of digital products. Previously at McKinsey.</p> */}
           </div>
         </div>
 

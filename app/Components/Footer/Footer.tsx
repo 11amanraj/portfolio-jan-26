@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className='bg-[#131313] responsive-padding flex flex-col lg:flex-row justify-between items-start lg:items-end pt-6 lg:pt-15 pb-4 font-heading'>
       <div className='w-full flex flex-col gap-4'>
-        <h5 className='text-[48px] lg:text-[72px] font-text'><span>Get in </span><span className='italic font-bold'>touch</span></h5>
+        <h5 className='text-[48px] lg:text-[72px] font-heading'><span>Get in </span><span className='italic font-bold'>touch</span></h5>
         <ul className='lg:hidden flex justify-between'>
           <li>
             <a href="mailto:25amrj@gmail.com">

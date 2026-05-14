@@ -9,7 +9,7 @@ const ActionLink: React.FC<{title: string, link: string, isPrimary: boolean}> = 
           rel="noopener noreferrer"
           className='group bg-background border border-background flex gap-3 px-5 py-3 rounded-full'
       >
-          <p className='font-text font-bold text-base sm:text-xl xl:text-2xl text-primary'>{title}</p>
+          <p className='font-heading font-bold text-base sm:text-xl xl:text-2xl text-primary'>{title}</p>
           <div className='w-6 h-6 sm:w-7 sm:h-7 xl:w-9 xl:h-9 bg-primary rounded-full group-hover:rotate-45 transition-transform duration-300'>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const ActionLink: React.FC<{title: string, link: string, isPrimary: boolean}> = 
             rel="noopener noreferrer"
             className='group border border-background flex gap-3 px-5 py-3 rounded-full'
         >
-            <p className='font-text font-bold text-base sm:text-xl xl:text-2xl text-background'>{title}</p>
+            <p className='font-heading font-bold text-base sm:text-xl xl:text-2xl text-background'>{title}</p>
             <div className='w-6 h-6 sm:w-7 sm:h-7 xl:w-9 xl:h-9 bg-background rounded-full group-hover:rotate-45 transition-transform duration-300'>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"

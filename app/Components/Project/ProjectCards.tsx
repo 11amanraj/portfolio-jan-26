@@ -26,7 +26,7 @@ const ProjectCards: React.FC<ProjectCardsProps> = ({ project, isReverse, designC
         <img src={project.image} alt={project.title} className='h-full object-cover' />
       </div>
       <div className='flex flex-col flex-1 gap-3 sm:gap-4'>
-        <h4 className='font-text font-bold text-2xl sm:text-3xl xl:text-4xl'>{project.title}</h4>
+        <h4 className='font-heading font-bold text-2xl sm:text-3xl xl:text-4xl'>{project.title}</h4>
         <div className='flex gap-3 flex-wrap'>
           {designCaseStudy
             ? <ActionLink title='Read Case Study' isPrimary={true} link={project.caseStudyLink} />

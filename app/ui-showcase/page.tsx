@@ -7,7 +7,7 @@ const slides = [
         projectName: 'Mise',
         image: '/ui-showcase/mise.png',
         description: 'A smart meal prep companion that plans your week around batch cooking sessions — matched to your diet, goals, budget and schedule.',
-        typographyLabel: 'Inter — 400/500/600/700',
+        typographyLabel: 'General Sans — 400/500/600/700',
         colors: {
             bg: '#0D0D0D',
             textPrimary: '#FFFFFF',
@@ -23,7 +23,7 @@ const slides = [
         projectName: 'Halo',
         image: '/ui-showcase/halo.png',
         description: 'A remote health monitoring app helping families stay connected with elderly loved ones — delivering calm, timely health updates when it matters most.',
-        typographyLabel: 'Inter — 400/600/700',
+        typographyLabel: 'General Sans — 400/600/700',
         colors: {
             bg: '#FFFFFF',
             textPrimary: '#000000',
