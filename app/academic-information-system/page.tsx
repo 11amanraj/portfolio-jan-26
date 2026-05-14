@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import Link from "next/link"
+import NextProject from "@/app/Components/CaseStudy/NextProject"
 import CalendarMonth from "@mui/icons-material/CalendarMonth"
 import DashboardCustomize from "@mui/icons-material/DashboardCustomize"
 import FolderOpen from "@mui/icons-material/FolderOpen"
@@ -11,8 +11,6 @@ const heroBanner =
     "/case-studies/academic-information-system/banner.jpg"
 const problemImage =
     "/case-studies/academic-information-system/problem.jpg"
-const nextProjectImage =
-    "/project-thumbnails/elderly-ux.jpg"
 const projectAccentClass = "text-[#00C5C5]"
 
 const meta = [
@@ -272,32 +270,7 @@ export default function Page() {
                     <PrincipleSection key={principle.title} {...principle} />
                 ))}
 
-                <section className="flex flex-col gap-6 bg-[#131313] p-5">
-                    <h2 className="text-[34px] leading-[1.2] tracking-[-0.96px] text-[#f0f0f0] md:text-[48px]">
-                        Next project
-                    </h2>
-                    <Link
-                        href="/elderly-mobile-usage"
-                        className="group flex flex-col gap-3"
-                        aria-label="View next project: Elderly Mobile Usage"
-                    >
-                        <div className="relative h-[280px] overflow-hidden bg-white md:h-[500px]">
-                            <img
-                                src={nextProjectImage}
-                                alt="Elderly Mobile Usage project thumbnail"
-                                className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                            />
-                        </div>
-                        <div>
-                            <p className="text-[15px] leading-[21px] tracking-[0.32px] text-[#f0f0f0]">
-                                Elderly Mobile Usage
-                            </p>
-                            <p className="text-[15px] leading-[21px] tracking-[0.32px] text-[#8a8a8a]">
-                                Spend Smart. Live Clear.
-                            </p>
-                        </div>
-                    </Link>
-                </section>
+                <NextProject />
             </div>
         </main>
     )
