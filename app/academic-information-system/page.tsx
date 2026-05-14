@@ -234,9 +234,9 @@ export default function Page() {
                     </div>
                 </section>
 
-                <section className="h-[360px] bg-[#131313] md:h-[706px]">
+                {/* <section className="h-[360px] bg-[#131313] md:h-[706px]">
                     <img src='/case-studies/academic-information-system/solution-1.jpg' alt="Moniq solution concept showing categorized expenses and bill splitting features" className="h-full w-full object-cover" />
-                </section>
+                </section> */}
 
                 <SplitSection
                     title="Solution"
