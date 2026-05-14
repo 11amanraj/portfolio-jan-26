@@ -1,11 +1,11 @@
 import type { ReactNode } from "react"
 import Link from "next/link"
-import AccountBalanceWallet from "@mui/icons-material/AccountBalanceWallet"
-import CompareArrows from "@mui/icons-material/CompareArrows"
-import History from "@mui/icons-material/History"
-import Insights from "@mui/icons-material/Insights"
-import NotificationsOff from "@mui/icons-material/NotificationsOff"
-import Star from "@mui/icons-material/Star"
+import CalendarMonth from "@mui/icons-material/CalendarMonth"
+import DashboardCustomize from "@mui/icons-material/DashboardCustomize"
+import FolderOpen from "@mui/icons-material/FolderOpen"
+import Forum from "@mui/icons-material/Forum"
+import LibraryBooks from "@mui/icons-material/LibraryBooks"
+import SyncAlt from "@mui/icons-material/SyncAlt"
 
 const heroBanner =
     "/case-studies/moniq/banner.jpg"
@@ -45,27 +45,27 @@ const painPoints = [
 
 const solutionFeatures = [
     {
-        icon: <Insights sx={{ fontSize: 20 }} />,
+        icon: <FolderOpen sx={{ fontSize: 20 }} />,
         label: "Student records are centralized into one accessible academic profile",
     },
     {
-        icon: <NotificationsOff sx={{ fontSize: 20 }} />,
+        icon: <CalendarMonth sx={{ fontSize: 20 }} />,
         label: "Course schedules, assignments, and curriculum progress are organized through structured management",
     },
     {
-        icon: <CompareArrows sx={{ fontSize: 20 }} />,
+        icon: <LibraryBooks sx={{ fontSize: 20 }} />,
         label: "Learning resources, notices, and institutional updates are unified for easier access",
     },
     {
-        icon: <Star sx={{ fontSize: 20 }} />,
+        icon: <Forum sx={{ fontSize: 20 }} />,
         label: "Faculty, administration, and student communication are connected through one streamlined platform",
     },
     {
-        icon: <History sx={{ fontSize: 20 }} />,
+        icon: <SyncAlt sx={{ fontSize: 20 }} />,
         label: "Academic workflows reduce repetitive administrative friction through clearer processes",
     },
     {
-        icon: <AccountBalanceWallet sx={{ fontSize: 20 }} />,
+        icon: <DashboardCustomize sx={{ fontSize: 20 }} />,
         label: "Essential educational tools and information are integrated into one cohesive system",
     },
 ]
