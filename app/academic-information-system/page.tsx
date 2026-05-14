@@ -8,9 +8,9 @@ import LibraryBooks from "@mui/icons-material/LibraryBooks"
 import SyncAlt from "@mui/icons-material/SyncAlt"
 
 const heroBanner =
-    "/case-studies/moniq/banner.jpg"
+    "/case-studies/academic-information-system/banner.jpg"
 const problemImage =
-    "/case-studies/moniq/problem.jpg"
+    "/case-studies/academic-information-system/problem.jpg"
 const nextProjectImage =
     "/project-thumbnails/elderly-ux.jpg"
 const projectAccentClass = "text-[#00C5C5]"
@@ -75,11 +75,11 @@ const principles = [
         title: "Centralized academic management, redefined",
         images: [
             {
-                src: "/case-studies/moniq/solution-3.jpg",
+                src: "/case-studies/academic-information-system/solution-3.jpg",
                 alt: "Moniq screen showing UPI-powered expense tracking insights",
             },
             {
-                src: "/case-studies/moniq/solution-4.jpg",
+                src: "/case-studies/academic-information-system/solution-4.jpg",
                 alt: "Moniq screen showing organized payment history and expense details",
             },
         ],
@@ -97,11 +97,11 @@ const principles = [
         title: "Streamlined communication and collaborative accessibility",
         images: [
             {
-                src: "/case-studies/moniq/solution-5.jpg",
+                src: "/case-studies/academic-information-system/solution-5.jpg",
                 alt: "Moniq screen showing social bill splitting with friends",
             },
             {
-                src: "/case-studies/moniq/solution-6.jpg",
+                src: "/case-studies/academic-information-system/solution-6.jpg",
                 alt: "Moniq screen showing shared expense organization and repayments",
             },
         ],
@@ -119,11 +119,11 @@ const principles = [
         title: "Smart academic tracking with informed decision-making",
         images: [
             {
-                src: "/case-studies/moniq/solution-7.jpg",
+                src: "/case-studies/academic-information-system/solution-7.jpg",
                 alt: "Moniq screen showing smart budgeting and spending categories",
             },
             {
-                src: "/case-studies/moniq/solution-8.jpg",
+                src: "/case-studies/academic-information-system/solution-8.jpg",
                 alt: "Moniq screen showing behavioral spending insights and budget awareness",
             },
         ],
@@ -235,7 +235,7 @@ export default function Page() {
                 </section>
 
                 <section className="h-[360px] bg-[#131313] md:h-[706px]">
-                    <img src='/case-studies/moniq/solution-1.jpg' alt="Moniq solution concept showing categorized expenses and bill splitting features" className="h-full w-full object-cover" />
+                    <img src='/case-studies/academic-information-system/solution-1.jpg' alt="Moniq solution concept showing categorized expenses and bill splitting features" className="h-full w-full object-cover" />
                 </section>
 
                 <SplitSection
@@ -262,7 +262,7 @@ export default function Page() {
 
                 <section className="h-[360px] bg-[#131313] md:h-[706px]">
                     <img
-                        src="/case-studies/moniq/solution-2.jpg"
+                        src="/case-studies/academic-information-system/solution-2.jpg"
                         alt="Moniq solution screens showing the app experience in detail"
                         className="h-full w-full object-cover"
                     />
