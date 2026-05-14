@@ -13,12 +13,12 @@ const imgProject5 = "/interaction-library.jpg"
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
   { img: imgProject2, title: "Academic Information System", desc: "Simplify Learning. Stay Informed.", wide: false, href: "/academic-information-system" },
-  { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "/elderly-mobile-experience" },
+  { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "https://www.behance.net/gallery/213415765/A-UX-case-study-on-senior-friendly-mobile-interactions" },
   { img: imgProject4, title: "UI Showcase", desc: "A collection of visual interface explorations", wide: false, href: "/ui-showcase" },
   { img: imgProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false, href: "/interaction-library" },
 ]
 
-export default function ExperimentPage() {
+export default function Page() {
   return (
     <div className="bg-[#080808] text-[#f0f0f0] font-sans overflow-x-hidden">
 
