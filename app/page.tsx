@@ -54,17 +54,29 @@ export default function Page() {
         {/* Location bar */}
         <div className="relative z-10 mx-12 h-7 flex items-center justify-between border-t border-[#616161]">
           <span className="text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px]">BASED IN INDIA</span>
-          <a
-            href="https://www.linkedin.com/in/aman-r-8a2724107/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px] gap-0.5"
-          >
-            LINKEDIN
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#8a8a8a]">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
+          <div className="flex gap-8">
+            <a
+              href="mailto:25amrj@gmail.com"
+              className="flex items-center text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px] gap-0.5"
+            >
+              EMAIL
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#8a8a8a]">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/aman-r-8a2724107/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px] gap-0.5"
+            >
+              LINKEDIN
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#8a8a8a]">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
