@@ -72,7 +72,7 @@ const solutionFeatures = [
 
 const principles = [
     {
-        title: "UPI-powered expense tracking, redefined",
+        title: "Centralized academic management, redefined",
         images: [
             {
                 src: "/case-studies/moniq/solution-3.jpg",
@@ -85,23 +85,16 @@ const principles = [
         ],
         paragraphs: [
             <>
-                Traditional expense tracking often relies on <Strong>manual entry</Strong>, requiring
-                users to <Strong>log, categorize, and reconstruct spending</Strong> after payments are
-                made. To reduce this hassle, the system was built around an existing habit users
-                already follow daily: <Strong>UPI payments</Strong>.
+                Traditional academic systems often rely on fragmented portals, disconnected records, and repetitive administrative processes that require students to navigate multiple platforms for schedules, resources, and communication. Instead of creating another isolated tool, this system was built around one core objective: unifying academic life.
             </>,
             <>
-                Instead of creating a separate tracking process,{" "}
-                <Strong>transaction details like amount, merchant, and payment history</Strong> are
-                used as the <Strong>foundation for expense organization</Strong>. Expense tracking
-                becomes a seamless extension of payment itself, reducing effort while improving
-                financial clarity.
+                By integrating{" "}<Strong>student records, course management, schedules, and institutional updates</Strong> into one structured ecosystem, academic navigation becomes more seamless, reducing complexity while improving accessibility and operational clarity.
             </>,
         ],
-        quote: "Built on top of familiar UPI behavior, this system converts payment history into meaningful financial control without added friction.",
+        quote: "Built on the need for connected education, this system transforms scattered academic processes into meaningful institutional efficiency—without unnecessary complexity.",
     },
     {
-        title: "Flexible social splitting and expense organization",
+        title: "Streamlined communication and collaborative accessibility",
         images: [
             {
                 src: "/case-studies/moniq/solution-5.jpg",
@@ -114,21 +107,16 @@ const principles = [
         ],
         paragraphs: [
             <>
-                <Strong>Shared expenses often become confusing</Strong> when personal spending,
-                repayments, and group coordination are treated the same. Bill splitting was designed
-                to function alongside <Strong>Friend Circles</Strong>, allowing transactions to be
-                split instantly while keeping coordination flexible.
+                Academic experiences often become inefficient when communication between students, faculty, and administration is scattered across disconnected channels. Important updates, deadlines, notices, and support systems can easily become fragmented.
             </>,
             <>
-                People can be <Strong>added or removed for a specific expense</Strong> without
-                changing the original group. After splitting, <Strong>only the user&apos;s share</Strong>{" "}
-                is included in budget calculations while repayments are treated separately.
+                To address this, communication tools were designed to function within the broader academic ecosystem, allowing <Strong>institutional announcements, academic coordination, and resource visibility</Strong> to remain connected, accessible, and easier to manage.
             </>,
         ],
-        quote: "Designed beyond basic bill splitting, this system transforms shared expenses into structured, trackable financial relationships.",
+        quote: "Designed beyond basic information systems, this platform transforms academic communication into structured, accessible educational coordination.",
     },
     {
-        title: "Smart budgeting with behavioral awareness",
+        title: "Smart academic tracking with informed decision-making",
         images: [
             {
                 src: "/case-studies/moniq/solution-7.jpg",
@@ -141,18 +129,13 @@ const principles = [
         ],
         paragraphs: [
             <>
-                Traditional finance apps are often <Strong>limited to tracking expenses</Strong>, but
-                budgeting becomes more effective when financial behavior is understood alongside it.
-                Moniq connects <Strong>monthly goals, category insights, unusual expenses, and
-                    transaction trends</Strong>.
+                Traditional academic platforms often focus on static records, but effective educational management requires more than access—it requires visibility into progress, responsibilities, and performance patterns.
             </>,
             <>
-                By combining budgeting with behavioral awareness, the patterns behind spending can
-                be recognized, allowing financial decisions to be shaped by real habits rather than
-                passive numbers alone.
+                By combining <Strong>academic records, coursework tracking, schedule management, and resource accessibility,</Strong> the system supports informed academic decision-making while helping users better understand their educational journey.
             </>,
         ],
-        quote: "Where budgeting meets behavioral insight, turning transactions into patterns and patterns into smarter money decisions.",
+        quote: "Where academic tracking meets informed decision-making, turning data into insights and insights into smarter educational outcomes.",
     },
 ]
 
