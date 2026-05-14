@@ -13,6 +13,7 @@ const problemImage =
     "/case-studies/moniq/problem.jpg"
 const nextProjectImage =
     "/project-thumbnails/elderly-ux.jpg"
+const projectAccentClass = "text-[#00C5C5]"
 
 const meta = [
     { label: "Interface Scope", value: ["Mobile"] },
@@ -160,8 +161,8 @@ export default function Page() {
         <main className="min-h-screen overflow-x-hidden bg-[#080808] text-[#f0f0f0]">
             <section className="mx-auto flex w-full max-w-350 flex-col gap-10 px-6 pb-10 pt-32 sm:px-12 lg:flex-row lg:items-end lg:pt-32">
                 <div className="flex-1">
-                    <p className="text-[48px] font-medium leading-none tracking-[-1.28px] text-[#193A72] md:text-[64px]">
-                        Academic Information System
+                    <p className={`text-[48px] font-medium leading-none tracking-[-1.28px] md:text-[64px] ${projectAccentClass}`}>
+                        Moniq
                     </p>
                     <h1 className="mt-2 text-[34px] font-medium leading-[1.1] tracking-[-1.28px] text-[#8a8a8a] md:text-[48px]">
                         Spend Smart. Live Clear.
@@ -186,7 +187,7 @@ export default function Page() {
                 <section className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
                     <p className="max-w-[506px] text-[24px] leading-[1.18] text-[#f0f0f0] md:text-[32px]">
                         Moniq has been designed as a concept payment experience that{" "}
-                        <span className="font-medium text-[#193A72]">
+                        <span className={`font-medium ${projectAccentClass}`}>
                             seamlessly integrates expense tracking, smart insights, and bill splitting
                             into UPI apps
                         </span>{" "}
@@ -220,7 +221,7 @@ export default function Page() {
                             </p>
                             <p className="text-[24px] leading-[1.3] text-[#f0f0f0] md:text-[32px]">
                                 Recognising this gap, an opportunity was identified to{" "}
-                                <span className="font-medium text-[#193A72]">
+                                <span className={`font-medium ${projectAccentClass}`}>
                                     challenge the extra effort required to stay financially aware
                                 </span>{" "}
                                 in a digital-first payment ecosystem.
@@ -249,7 +250,7 @@ export default function Page() {
                             to uncover how users manage, track, and split expenses in daily life.
                         </p>
                         <div>
-                            <p className="mb-3 text-[16px] leading-[1.3] tracking-[0.32px] text-[#193A72]">
+                            <p className={`mb-3 text-[16px] leading-[1.3] tracking-[0.32px] ${projectAccentClass}`}>
                                 Common Painpoints
                             </p>
                             <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-1">
