@@ -46,27 +46,27 @@ const painPoints = [
 const solutionFeatures = [
     {
         icon: <Insights sx={{ fontSize: 20 }} />,
-        label: "Daily payments are automatically grouped into clear spending categories",
+        label: "Student records are centralized into one accessible academic profile",
     },
     {
         icon: <NotificationsOff sx={{ fontSize: 20 }} />,
-        label: "Monthly budgets are tracked with actionable insights, not just passive statistics",
+        label: "Course schedules, assignments, and curriculum progress are organized through structured management",
     },
     {
         icon: <CompareArrows sx={{ fontSize: 20 }} />,
-        label: "Shared expenses can be split instantly with friends, groups, or custom participants",
+        label: "Learning resources, notices, and institutional updates are unified for easier access",
     },
     {
         icon: <Star sx={{ fontSize: 20 }} />,
-        label: "Receipts, notes, and transaction context are stored for future clarity",
+        label: "Faculty, administration, and student communication are connected through one streamlined platform",
     },
     {
         icon: <History sx={{ fontSize: 20 }} />,
-        label: "Pending repayments are organized and reminders can be sent without awkward follow-ups",
+        label: "Academic workflows reduce repetitive administrative friction through clearer processes",
     },
     {
         icon: <AccountBalanceWallet sx={{ fontSize: 20 }} />,
-        label: "Cash, digital payments, and personal exclusions are all accounted for in one system",
+        label: "Essential educational tools and information are integrated into one cohesive system",
     },
 ]
 
@@ -257,13 +257,11 @@ export default function Page() {
 
                 <SplitSection
                     title="Solution"
-                    mutedTitle="Designed beyond simple tracking"
+                    mutedTitle="Designed beyond simple management"
                     body={
                         <>
                             <p>
-                                Moniq brings expense tracking into the payment flow itself, helping
-                                users understand daily spending while keeping transactions familiar,
-                                quick, and socially useful.
+                                This Academic Information System brings academic operations into one connected ecosystem, helping students navigate educational processes with greater clarity while keeping access to records, resources, and communication seamless, structured, and efficient.
                             </p>
                             <div>
                                 <p className="border-b border-[#616161] pb-2 text-[14px] text-[#8a8a8a]">
