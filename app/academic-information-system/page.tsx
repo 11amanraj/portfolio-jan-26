@@ -19,7 +19,7 @@ const meta = [
     { label: "Interface Scope", value: ["Mobile"] },
     {
         label: "Key Features",
-        value: ["Expense Insights", "Bill Splitting", "Merchant Analysis", "Budget Analysis"],
+        value: ["Student Records", "Course Management", "Resource Access", "Institutional Communication"],
     },
     {
         label: "Tools & Techniques Used",
@@ -162,15 +162,14 @@ export default function Page() {
             <section className="mx-auto flex w-full max-w-350 flex-col gap-10 px-6 pb-10 pt-32 sm:px-12 lg:flex-row lg:items-end lg:pt-32">
                 <div className="flex-1">
                     <p className={`text-[48px] font-medium leading-none tracking-[-1.28px] md:text-[64px] ${projectAccentClass}`}>
-                        Moniq
+                        Academic Information System
                     </p>
                     <h1 className="mt-2 text-[34px] font-medium leading-[1.1] tracking-[-1.28px] text-[#8a8a8a] md:text-[48px]">
-                        Spend Smart. Live Clear.
+                        Simplify Learning. Stay Informed.
                     </h1>
                 </div>
                 <p className="max-w-162 text-[18px] leading-normal text-[#8a8a8a] md:text-[24px]">
-                    Helping users track spending, split expenses, and build better financial habits
-                    through everyday UPI payments.
+                    An integrated academic platform designed to simplify student life through easy access to courses, records, and campus services.
                 </p>
             </section>
 
@@ -186,13 +185,11 @@ export default function Page() {
             <div className="mx-auto flex w-full max-w-350 flex-col gap-24 px-6 py-16 sm:px-12 lg:py-24">
                 <section className="grid gap-10 border-t border-[#616161] pt-10 lg:grid-cols-2">
                     <p className="max-w-[506px] text-[24px] leading-[1.18] text-[#f0f0f0] md:text-[32px]">
-                        Moniq has been designed as a concept payment experience that{" "}
+                        The Academic Information System has been designed as a centralized educational platform that seamlessly integrates{" "}
                         <span className={`font-medium ${projectAccentClass}`}>
-                            seamlessly integrates expense tracking, smart insights, and bill splitting
-                            into UPI apps
+                            student records, academic resources, and course management
                         </span>{" "}
-                        to encourage better spending management, financial awareness, and stronger
-                        everyday financial habits.
+                        into one system to encourage accessibility, streamlined administration, and efficient academic experiences.
                     </p>
                     <div className="grid gap-0">
                         {meta.map((item) => (

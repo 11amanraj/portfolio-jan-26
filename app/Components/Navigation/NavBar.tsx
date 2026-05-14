@@ -49,7 +49,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="absolute inset-x-0 top-0 z-20 h-25 backdrop-blur-[4px]">
+      <nav className="absolute inset-x-0 top-0 z-20 h-20 backdrop-blur-[4px]">
         <div className="flex h-full items-center justify-between px-12 pr-10">
           <span className="text-[22px] font-heading leading-none tracking-[-0.22px] text-[#f0f0f0]">AMAN RAJ</span>
           <a
