@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 
 const imgProject1 = "/case-studies/moniq/banner.jpg"
@@ -24,20 +23,20 @@ export default function Page() {
 
         {/* Hero graphic with mix-blend-difference */}
         <div className="flex-1 relative flex flex-col items-center justify-end pt-20 pb-10 min-h-[calc(100vh-28px)]">
-          <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-250 -translate-x-1/2 -translate-y-1/2 px-6 text-center text-8xl font-heading leading-[1.12]">
+          <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-[1000px] -translate-x-1/2 -translate-y-1/2 px-6 text-center font-heading text-[clamp(3rem,12vw,6rem)] leading-[1.08] sm:px-10 lg:leading-[1.12]">
             I craft products through design and code.
           </div>
 
           {/* Bio text */}
-          <div className="relative z-10 text-center max-w-110 text-[#f0f0f0] text-[13.4px] leading-[21px] mb-10">
+          <div className="relative z-10 mx-6 mb-10 max-w-110 text-center text-[13.4px] leading-[21px] text-[#f0f0f0]">
             <p>Hey – I’m Aman. Designer & developer creating the next generation of digital experiences with design, strategy, and code.</p>
           </div>
         </div>
 
         {/* Location bar */}
-        <div className="relative z-10 mx-12 h-7 flex items-center justify-between border-t border-[#616161]">
+        <div className="relative z-10 mx-6 flex min-h-7 items-center justify-between gap-4 border-t border-[#616161] py-1.5 sm:mx-12 sm:h-7 sm:py-0">
           <span className="text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px]">BASED IN INDIA</span>
-          <div className="flex gap-8">
+          <div className="flex gap-4 sm:gap-8">
             <a
               href="mailto:25amrj@gmail.com"
               className="flex items-center text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px] gap-0.5"
@@ -64,15 +63,15 @@ export default function Page() {
       </section>
 
       {/* ── SELECTED WORKS ────────────────────────────────────────── */}
-      <section className="bg-[#080808] flex flex-col items-center pt-[100px] pb-[150px] px-10">
+      <section className="bg-[#080808] flex flex-col items-center px-6 pt-20 pb-24 sm:px-10 lg:pt-[100px] lg:pb-[150px]">
         <div className="w-full max-w-[1400px] flex flex-col gap-[41px]">
 
           {/* Section header */}
-          <h2 className="text-[#f0f0f0] text-[48px] tracking-[-0.96px] leading-[1.2]">Selected works</h2>
+          <h2 className="text-[#f0f0f0] text-[40px] tracking-[-0.8px] leading-[1.2] sm:text-[48px] sm:tracking-[-0.96px]">Selected works</h2>
 
           {/* Row 1: full-width */}
           <div className="flex flex-col gap-3">
-            <Link href="/moniq-payment-app" className="w-full h-119.5 overflow-hidden bg-white block">
+            <Link href="/moniq-payment-app" className="block h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-119.5">
               <img
                 src={PROJECTS[0].img}
                 alt={PROJECTS[0].title}
@@ -86,15 +85,15 @@ export default function Page() {
           </div>
 
           {/* Row 2: two columns */}
-          <div className="grid grid-cols-2 gap-[41px]">
+          <div className="flex flex-col gap-[41px] lg:flex-row">
             {PROJECTS.slice(1, 3).map(({ img, title, desc, href }) => (
-              <div key={title + img} className="flex flex-col gap-3">
+              <div key={title + img} className="flex flex-1 flex-col gap-3">
                 {href ? (
-                  <Link href={href} className="w-full h-[478px] overflow-hidden bg-white block">
+                  <Link href={href} className="block h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-[478px]">
                     <img src={img} alt={title} className="w-full h-full object-cover" />
                   </Link>
                 ) : (
-                  <div className="w-full h-[478px] overflow-hidden bg-white">
+                  <div className="h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-[478px]">
                     <img src={img} alt={title} className="w-full h-full object-cover" />
                   </div>
                 )}
@@ -107,15 +106,15 @@ export default function Page() {
           </div>
 
           {/* Row 3: two columns */}
-          <div className="grid grid-cols-2 gap-[41px]">
+          <div className="flex flex-col gap-[41px] lg:flex-row">
             {PROJECTS.slice(3, 5).map(({ img, title, desc, href }) => (
-              <div key={title} className="flex flex-col gap-3">
+              <div key={title} className="flex flex-1 flex-col gap-3">
                 {href ? (
-                  <Link href={href} className="w-full h-[478px] overflow-hidden bg-white block">
+                  <Link href={href} className="block h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-[478px]">
                     <img src={img} alt={title} className="w-full h-full object-cover" />
                   </Link>
                 ) : (
-                  <div className="w-full h-[478px] overflow-hidden bg-white">
+                  <div className="h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-[478px]">
                     <img src={img} alt={title} className="w-full h-full object-cover" />
                   </div>
                 )}
