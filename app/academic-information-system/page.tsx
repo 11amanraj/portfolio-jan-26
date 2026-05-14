@@ -30,16 +30,16 @@ const meta = [
 
 const painPoints = [
     {
-        title: "Transaction overload",
-        body: "72% of users reported losing track of frequent micro-payments, with many relying on bank balance alone to estimate spending.",
+        title: "Fragmented information access",
+        body: "76% of participants reported switching between multiple platforms for grades, schedules, notices, and resources—creating confusion and inefficiency.",
     },
     {
         title: "Shared expense friction",
-        body: "Users often found group payments awkward to calculate, follow up on, and separate from their own personal spending.",
+        body: "68% of participants found routine academic tasks such as accessing records, tracking coursework, or managing submissions more complicated than necessary.",
     },
     {
         title: "Poor spending context",
-        body: "Payment histories showed where money moved, but rarely explained why it moved, what category it belonged to, or how it affected budgets.",
+        body: "71% of participants reported missing important updates, deadlines, or academic information due to scattered communication channels.",
     },
 ]
 
@@ -206,22 +206,18 @@ export default function Page() {
 
                 <SplitSection
                     title="Problem"
-                    mutedTitle="Solving the 'Mindless Spending' Gap"
+                    mutedTitle="Solving the 'Disconnected Academic Experience' Gap"
                     body={
                         <>
                             <p>
-                                Many users make frequent UPI payments every day but lack clear
-                                visibility into where their money goes, how small expenses accumulate,
-                                or how shared costs impact their finances. While payment apps simplify
-                                transactions, they often stop short of enabling deeper spending
-                                awareness, budgeting discipline, and proactive financial decision-making.
+                                Many students and institutions manage academic processes through fragmented systems that lack clear accessibility to records, resources, schedules, or communication. While digital platforms exist, they often stop short of creating a truly connected academic ecosystem—leading to inefficiencies, administrative friction, and missed opportunities for better educational experiences.
                             </p>
                             <p className="text-[24px] leading-[1.3] text-[#f0f0f0] md:text-[32px]">
                                 Recognising this gap, an opportunity was identified to{" "}
                                 <span className={`font-medium ${projectAccentClass}`}>
-                                    challenge the extra effort required to stay financially aware
+                                    challenge the complexity and fragmentation of academic management
                                 </span>{" "}
-                                in a digital-first payment ecosystem.
+                                creating a system that makes navigating education more accessible, connected, and efficient.
                             </p>
                         </>
                     }
@@ -233,18 +229,14 @@ export default function Page() {
                     </h2>
                     <div className="flex flex-col gap-8">
                         <p className="text-[15px] leading-[1.4] tracking-[0.15px] text-[#8a8a8a]">
-                            Tracking how people spend money sounds simple until you ask them to
-                            explain it. Frequent digital payments, fragmented transaction histories,
-                            and informal social splits make financial behavior surprisingly difficult
-                            to monitor.
+                            Managing academic life sounds structured until students are asked to navigate multiple disconnected systems for records, resources, schedules, and communication. Fragmented platforms, inconsistent information access, and administrative complexity often make educational experiences unnecessarily difficult to manage.
                             <br />
                             <br />
-                            To better understand these patterns, we{" "}
+                            To better understand these challenges, we surveyed and interviewed over{" "}
                             <span className="text-white">
-                                surveyed and interviewed over 42 participants across students and
-                                young professionals
+                                60 students, faculties and staff across diverse academic programs
                             </span>{" "}
-                            to uncover how users manage, track, and split expenses in daily life.
+                            to uncover how users access, manage, and interact with institutional systems in daily life.
                         </p>
                         <div>
                             <p className={`mb-3 text-[16px] leading-[1.3] tracking-[0.32px] ${projectAccentClass}`}>
