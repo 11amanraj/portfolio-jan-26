@@ -49,13 +49,13 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="absolute inset-x-0 top-0 z-20 h-20 backdrop-blur-[4px]">
-        <div className="flex h-full items-center justify-between px-12 pr-10">
-          <a href="/" className="text-[22px] font-heading leading-none tracking-[-0.22px] text-[#f0f0f0]">AMAN RAJ</a>
+      <nav className="absolute inset-x-0 top-0 z-20 backdrop-blur-[4px]">
+        <div className="flex min-h-16 items-center justify-between px-6 py-4 sm:min-h-18 sm:px-12 sm:py-5 lg:min-h-20 lg:px-16 lg:py-6">
+          <Link href="/" className="text-[18px] font-heading leading-none tracking-[-0.18px] text-[#f0f0f0] sm:text-[20px] sm:tracking-[-0.2px] lg:text-[22px] lg:tracking-[-0.22px]">AMAN RAJ</Link>
           <a
             href="/aman_resume.pdf"
             download
-            className="flex items-center gap-2 border border-[#2e2e2e] bg-[#080808]/45 px-4 py-3 text-[14.9px] leading-6 text-[#dbdbdb] backdrop-blur-[7.5px] transition-colors hover:border-[#68acef] hover:text-white"
+            className="flex items-center gap-1.5 border border-[#2e2e2e] bg-[#080808]/45 px-3 py-2 text-[13px] leading-5 text-[#dbdbdb] backdrop-blur-[7.5px] transition-colors hover:border-[#68acef] hover:text-white sm:gap-2 sm:px-4 sm:py-3 sm:text-[14.9px] sm:leading-6"
           >
             Resume
             <FileDownloadIcon />
