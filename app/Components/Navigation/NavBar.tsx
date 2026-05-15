@@ -49,7 +49,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="absolute inset-x-0 top-0 z-20 backdrop-blur-[4px]">
+      <nav className="absolute inset-x-0 top-0 z-20">
         <div className="flex min-h-16 items-center justify-between px-6 py-4 sm:min-h-18 sm:px-12 sm:py-5 lg:min-h-20 lg:px-16 lg:py-6">
           <Link href="/" className="text-[18px] font-heading leading-none tracking-[-0.18px] text-[#f0f0f0] sm:text-[20px] sm:tracking-[-0.2px] lg:text-[22px] lg:tracking-[-0.22px]">AMAN RAJ</Link>
           <a
