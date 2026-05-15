@@ -1,3 +1,5 @@
+import MiniFooter from "../Components/Footer/MiniFooter";
+
 export default function Page() {
     return (
         <div className="h-screen w-screen flex flex-col 2xl:flex-row overflow-hidden">
@@ -75,6 +77,7 @@ export default function Page() {
                     Interaction Library
                 </span>
             </div>
+            <MiniFooter fixed />
         </div>
     );
 }

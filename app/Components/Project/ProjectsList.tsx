@@ -63,7 +63,7 @@ const ProjectsList = () => {
 
   return (
     <div className="snap-start text-background flex flex-col w-full gap-8 py-6 sm:py-16 responsive-padding bg-primary">
-      <h3 className='text-[64px] sm:text-[96px] font-text font-bold'>Projects</h3>
+      <h3 className='text-[64px] sm:text-[96px] font-heading font-bold'>Projects</h3>
       <ul className='flex flex-col gap-8 sm:gap-8 items-center'>
         {design_projects
           .map(project =>
