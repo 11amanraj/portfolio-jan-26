@@ -6,14 +6,15 @@ const imgProject1 = "/case-studies/moniq/banner.jpg"
 const imgProject2 = "/case-studies/academic-information-system/banner.jpg"
 const imgProject3 = "/case-studies/elderly-mobile-experience/banner.jpg"
 const imgProject4 = "/ui-showcase.jpg"
-const imgProject5 = "/interaction-library.jpg"
+const imgProject5 = "/ui-videos/thumbnail/interaction-library-thumbnail.jpg"
+const videoProject5 = "/ui-videos/thumbnail/interaction-library-video.mp4"
 
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
   { img: imgProject2, title: "Academic Information System", desc: "Simplify Learning. Stay Informed.", wide: false, href: "/academic-information-system" },
   { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "https://www.behance.net/gallery/213415765/A-UX-case-study-on-senior-friendly-mobile-interactions" },
   { img: imgProject4, title: "UI Showcase", desc: "A collection of visual interface explorations", wide: false, href: "/ui-showcase" },
-  { img: imgProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false, href: "/interaction-library" },
+  { img: imgProject5, video: videoProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false, href: "/interaction-library" },
 ]
 
 export default function Page() {
@@ -83,15 +84,43 @@ export default function Page() {
 
           {/* Row 3: two columns */}
           <div className="flex flex-col gap-[41px] lg:flex-row">
-            {PROJECTS.slice(3, 5).map(({ img, title, desc, href }) => (
+            {PROJECTS.slice(3, 5).map(({ img, video, title, desc, href }) => (
               <div key={title} className="flex flex-1 flex-col gap-3">
                 {href ? (
-                  <Link href={href} className="block h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-[478px]">
-                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  <Link href={href} className={`${video ? "flex items-center justify-center bg-[#070736]" : "block bg-white"} h-[320px] w-full overflow-hidden sm:h-[420px] lg:h-[478px]`}>
+                    {video ? (
+                      <video
+                        src={video}
+                        poster={img}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-auto"
+                      >
+                        <img src={img} alt={title} className="w-full h-auto" />
+                      </video>
+                    ) : (
+                      <img src={img} alt={title} className="w-full h-full object-cover" />
+                    )}
                   </Link>
                 ) : (
-                  <div className="h-[320px] w-full overflow-hidden bg-white sm:h-[420px] lg:h-[478px]">
-                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  <div className={`${video ? "flex items-center justify-center bg-[#070736]" : "bg-white"} h-[320px] w-full overflow-hidden sm:h-[420px] lg:h-[478px]`}>
+                    {video ? (
+                      <video
+                        src={video}
+                        poster={img}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-auto"
+                      >
+                        <img src={img} alt={title} className="w-full h-auto" />
+                      </video>
+                    ) : (
+                      <img src={img} alt={title} className="w-full h-full object-cover" />
+                    )}
                   </div>
                 )}
                 <div>
