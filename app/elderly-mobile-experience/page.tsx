@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import Footer from "@/app/Components/Footer/Footer"
 import NextProject from "@/app/Components/CaseStudy/NextProject"
 import AccountBalanceWallet from "@mui/icons-material/AccountBalanceWallet"
 import CompareArrows from "@mui/icons-material/CompareArrows"
@@ -302,6 +303,7 @@ export default function Page() {
 
                 <NextProject />
             </div>
+            <Footer />
         </main>
     )
 }

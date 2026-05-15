@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import Footer from "@/app/Components/Footer/Footer"
 import NextProject from "@/app/Components/CaseStudy/NextProject"
 import CalendarMonth from "@mui/icons-material/CalendarMonth"
 import DashboardCustomize from "@mui/icons-material/DashboardCustomize"
@@ -272,6 +273,7 @@ export default function Page() {
 
                 <NextProject />
             </div>
+            <Footer />
         </main>
     )
 }

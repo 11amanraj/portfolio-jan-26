@@ -1,5 +1,6 @@
 import Link from "next/link"
 import MiniFooter from "./Components/Footer/MiniFooter"
+import Footer from "./Components/Footer/Footer"
 
 const imgProject1 = "/case-studies/moniq/banner.jpg"
 const imgProject2 = "/case-studies/academic-information-system/banner.jpg"
@@ -100,9 +101,10 @@ export default function Page() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
+
+      <Footer />
 
       {/* ── CONTACT / FOOTER ──────────────────────────────────────── */}
       {/* <footer className="bg-[#131313] flex flex-col items-center overflow-hidden">

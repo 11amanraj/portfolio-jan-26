@@ -1,4 +1,5 @@
 import EachUIProject from './EachUIProject'
+import MiniFooter from '../Components/Footer/MiniFooter'
 
 const slides = [
     {
@@ -37,10 +38,13 @@ const slides = [
 
 export default function Page() {
     return (
-        <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
-            {slides.map((slide, i) => (
-                <EachUIProject key={i} {...slide} />
-            ))}
-        </div>
+        <>
+            <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory">
+                {slides.map((slide, i) => (
+                    <EachUIProject key={i} {...slide} />
+                ))}
+            </div>
+            <MiniFooter fixed />
+        </>
     )
 }

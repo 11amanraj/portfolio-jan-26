@@ -1,6 +1,14 @@
-const MiniFooter = () => {
+type MiniFooterProps = {
+  fixed?: boolean
+}
+
+const MiniFooter = ({ fixed = false }: MiniFooterProps) => {
+  const positionClass = fixed
+    ? "fixed inset-x-0 bottom-0 z-50"
+    : "relative z-10"
+
   return (
-    <div className="relative z-10 mx-6 flex min-h-7 items-center justify-between gap-4 border-t border-[#616161] py-1.5 sm:mx-12 sm:h-7 sm:py-0">
+    <div className={`${positionClass} mx-6 flex min-h-7 items-center justify-between gap-4 border-t border-[#616161] py-1.5 sm:mx-12 sm:h-7 sm:py-0`}>
       <span className="text-[#8a8a8a] text-[11px] uppercase tracking-[0.15px]">BASED IN INDIA</span>
       <div className="flex gap-4 sm:gap-8">
         <a
