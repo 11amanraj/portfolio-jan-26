@@ -6,6 +6,7 @@ import DashboardCustomize from "@mui/icons-material/DashboardCustomize"
 import FolderOpen from "@mui/icons-material/FolderOpen"
 import Forum from "@mui/icons-material/Forum"
 import LibraryBooks from "@mui/icons-material/LibraryBooks"
+import OpenInNew from "@mui/icons-material/OpenInNew"
 import SyncAlt from "@mui/icons-material/SyncAlt"
 
 const heroBanner =
@@ -161,6 +162,15 @@ export default function Page() {
                     alt="Moniq payment app shown on a phone beside a notebook and pen"
                     className="absolute inset-x-0 top-0 h-full w-full object-cover"
                 />
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute right-8 top-8 z-10 hidden min-h-14 items-center gap-3 bg-[#00C5C5] px-7 text-[16px] font-medium leading-none text-[#080808] transition-colors hover:bg-[#35e1e1] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f0f0f0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] sm:min-h-16 sm:px-8 sm:text-[18px]"
+                >
+                    View Presentation
+                    <OpenInNew sx={{ fontSize: 22 }} />
+                </a>
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-b from-transparent to-[#080808]" />
             </section>
 

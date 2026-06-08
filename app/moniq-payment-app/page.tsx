@@ -6,6 +6,7 @@ import CompareArrows from "@mui/icons-material/CompareArrows"
 import History from "@mui/icons-material/History"
 import Insights from "@mui/icons-material/Insights"
 import NotificationsOff from "@mui/icons-material/NotificationsOff"
+import OpenInNew from "@mui/icons-material/OpenInNew"
 import Star from "@mui/icons-material/Star"
 
 const heroBanner =
@@ -178,6 +179,15 @@ export default function Page() {
                     alt="Moniq payment app shown on a phone beside a notebook and pen"
                     className="absolute inset-x-0 top-0 h-full w-full object-cover"
                 />
+                <a
+                    href="https://www.figma.com/deck/IcFefmRh75rHqGCGEVEU2g"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute right-8 top-8 z-10 inline-flex min-h-14 items-center gap-3 bg-[#68acef] px-7 text-[16px] font-medium leading-none text-[#080808] transition-colors hover:bg-[#86bdff] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f0f0f0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] sm:min-h-16 sm:px-8 sm:text-[18px]"
+                >
+                    View Presentation
+                    <OpenInNew sx={{ fontSize: 22 }} />
+                </a>
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-b from-transparent to-[#080808]" />
             </section>
 

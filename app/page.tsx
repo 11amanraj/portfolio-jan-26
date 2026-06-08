@@ -12,7 +12,7 @@ const videoProject5 = "/ui-videos/thumbnail/interaction-library-video.mp4"
 const PROJECTS = [
   { img: imgProject1, title: "Moniq Payment App", desc: "Spend Smart. Live Clear.", wide: true },
   { img: imgProject2, title: "Academic Information System", desc: "Simplify Learning. Stay Informed.", wide: false, href: "/academic-information-system" },
-  { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "https://www.behance.net/gallery/213415765/A-UX-case-study-on-senior-friendly-mobile-interactions" },
+  { img: imgProject3, title: "Elderly Mobile Experience", desc: "Designing a mobile app for elderly users", wide: false, href: "https://www.figma.com/proto/5YXWSJJFqKJUS0Gg96jOHJ/Portfolio-projects?node-id=118-13&viewport=326%2C1530%2C0.14&t=cYchq1PMBwOOuHbx-1&scaling=scale-down-width&content-scaling=fixed&page-id=118%3A2" },
   { img: imgProject4, title: "UI Showcase", desc: "A collection of visual interface explorations", wide: false, href: "/ui-showcase" },
   { img: imgProject5, video: videoProject5, title: "The Interaction Library", desc: "A curated collection of micro-interactions and motion design", wide: false, href: "/interaction-library" },
 ]
