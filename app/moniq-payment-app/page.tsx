@@ -183,7 +183,7 @@ export default function Page() {
                     href="https://www.figma.com/deck/IcFefmRh75rHqGCGEVEU2g"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute right-8 top-8 z-10 inline-flex min-h-14 items-center gap-3 bg-[#68acef] px-7 text-[16px] font-medium leading-none text-[#080808] transition-colors hover:bg-[#86bdff] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f0f0f0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] sm:min-h-16 sm:px-8 sm:text-[18px]"
+                    className="absolute right-8 top-8 z-10 hidden min-h-14 items-center gap-3 bg-[#68acef] px-7 text-[16px] font-medium leading-none text-[#080808] transition-colors hover:bg-[#86bdff] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f0f0f0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] sm:min-h-16 sm:px-8 sm:text-[18px]"
                 >
                     View Presentation
                     <OpenInNew sx={{ fontSize: 22 }} />
